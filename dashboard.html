@@ -1,72 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safety First Dashboard</title>
 
-    <title>Dashboard</title>
-
-    <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-<div class="container">
+<header class="topbar">
 
-    <h1 id="welcomeMessage">
-        Welcome!
-    </h1>
-
-    <div class="section">
-
-        <h2>📢 Latest Announcement</h2>
-
-        <p id="announcement">
-
-            No announcements available.
-
-        </p>
-
+    <div class="logo">
+        🛡 <span>Safety First</span>
     </div>
 
-    <div class="section">
+    <div class="user-area">
+        <span id="welcomeUser">Welcome!</span>
 
-        <h2>🔔 Notifications</h2>
-
-        <p>
-
-            No new notifications.
-
-        </p>
-
+        <button id="logoutBtn">Sign Out</button>
     </div>
 
-    <div class="section">
+</header>
 
-        <h2>🚨 Emergency Contacts</h2>
 
-        <p>
+<div class="dashboard">
 
-            🚓 Police - 911<br>
-            🚒 Fire Department - 911<br>
-            🚑 Ambulance - 911
+    <aside class="sidebar">
 
-        </p>
+        <h2>Menu</h2>
 
-    </div>
+        <ul>
 
-    <button id="logoutBtn">
+            <li class="active">🏠 Dashboard</li>
 
-        Sign Out
+            <li>📢 Announcements</li>
 
-    </button>
+            <li>🔔 Notifications</li>
+
+            <li>🚨 Safety Guides</li>
+
+            <li>📞 Emergency Contacts</li>
+
+            <li>👤 Profile</li>
+
+        </ul>
+
+    </aside>
+
+
+
+    <main class="content">
+
+        <div class="card">
+
+            <h2>Welcome Back!</h2>
+
+            <p id="usernameDisplay">
+
+                Loading...
+
+            </p>
+
+        </div>
+
+
+
+        <div class="card">
+
+            <h2>📢 Latest Announcement</h2>
+
+            <div id="announcement">
+
+                No announcements yet.
+
+            </div>
+
+        </div>
+
+
+
+        <div class="card">
+
+            <h2>🔔 Notifications</h2>
+
+            <div>
+
+                No new notifications.
+
+            </div>
+
+        </div>
+
+
+
+        <div class="card">
+
+            <h2>🚨 Emergency Contacts</h2>
+
+            <ul>
+
+                <li>🚓 Police - 911</li>
+
+                <li>🚒 Fire - 911</li>
+
+                <li>🚑 Ambulance - 911</li>
+
+                <li>☎ School Office</li>
+
+            </ul>
+
+        </div>
+
+    </main>
 
 </div>
 
-<script type="module" src="dashboard.js"></script>
+<script type="module" src="js/dashboard.js"></script>
 
 </body>
 </html>
