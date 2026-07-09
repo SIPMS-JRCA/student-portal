@@ -55,11 +55,14 @@ if (signupBtn) {
                     password
                 );
 
-            await addDoc(collection(db, "users"), {
-                uid: userCredential.user.uid,
+            await setDoc(doc(db, "users", userCredential.user.uid), {
+                
                 username: username,
+                
                 email: email,
+                
                 role: "student"
+            
             });
 
             alert("Account created successfully!");

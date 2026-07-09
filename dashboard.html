@@ -1,48 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Dashboard</title>
 
     <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
 
-    <div class="container">
+<div class="container">
 
-        <h1 id="welcomeMessage">Welcome!</h1>
+    <h1 id="welcomeMessage">
+        Welcome!
+    </h1>
 
-        <p>You have successfully logged in.</p>
+    <div class="section">
 
-        <button onclick="logout()">
-            Sign Out
-        </button>
+        <h2>📢 Latest Announcement</h2>
 
-        <br><br>
+        <p id="announcement">
 
-        <a href="index.html">
-            Back to Home
-        </a>
+            No announcements available.
+
+        </p>
 
     </div>
 
-    <script src="script.js"></script>
+    <div class="section">
 
-    <script>
-        // Prevent users from opening this page without logging in
-        if (localStorage.getItem("loggedIn") !== "true") {
-            window.location.href = "login.html";
-        }
+        <h2>🔔 Notifications</h2>
 
-        // Display the logged-in user's name
-        const username = localStorage.getItem("currentUser");
+        <p>
 
-        if (username) {
-            document.getElementById("welcomeMessage").textContent =
-                "Welcome, " + username + "!";
-        }
-    </script>
+            No new notifications.
+
+        </p>
+
+    </div>
+
+    <div class="section">
+
+        <h2>🚨 Emergency Contacts</h2>
+
+        <p>
+
+            🚓 Police - 911<br>
+            🚒 Fire Department - 911<br>
+            🚑 Ambulance - 911
+
+        </p>
+
+    </div>
+
+    <button id="logoutBtn">
+
+        Sign Out
+
+    </button>
+
+</div>
+
+<script type="module" src="dashboard.js"></script>
 
 </body>
 </html>

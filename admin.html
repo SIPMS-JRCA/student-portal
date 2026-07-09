@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Admin Dashboard</h1>
+
+    <div class="section">
+
+        <h2>Create Announcement</h2>
+
+        <input
+            type="text"
+            id="announcementTitle"
+            placeholder="Announcement Title"
+        >
+
+        <textarea
+            id="announcementMessage"
+            placeholder="Write your announcement here..."
+            rows="6"
+        ></textarea>
+
+        <button id="postAnnouncementBtn">
+            Post Announcement
+        </button>
+
+    </div>
+
+    <div class="section">
+
+        <h2>Posted Announcements</h2>
+
+        <div id="announcementList">
+
+            No announcements yet.
+
+        </div>
+
+    </div>
+
+    <button id="logoutBtn">
+        Sign Out
+    </button>
+
+</div>
+
+<script type="module" src="admin.js"></script>
+
+</body>
+</html>
