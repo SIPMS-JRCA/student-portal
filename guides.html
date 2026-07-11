@@ -1,0 +1,172 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Safety Guides | Safety First</title>
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/dashboard.css">
+
+    <link rel="stylesheet" href="css/guides.css">
+
+</head>
+
+<body>
+
+<header class="topbar">
+
+    <div class="logo">
+
+        <img
+            src="images/logo.png"
+            class="logo-img">
+
+        <span>
+
+            Safety First
+
+        </span>
+
+    </div>
+
+    <div class="user-area">
+
+        <button
+            class="btn-primary"
+            onclick="window.location.href='dashboard.html'">
+
+            <i class="fa-solid fa-house"></i>
+
+            Dashboard
+
+        </button>
+
+    </div>
+
+</header>
+
+<div class="dashboard">
+
+    <aside class="sidebar"></aside>
+
+    <main class="content">
+
+        <section class="page-title">
+
+            <h1>
+
+                <i class="fa-solid fa-book-open"></i>
+
+                Campus Emergency Preparedness Guide
+
+            </h1>
+
+            <p>
+
+                Learn the proper evacuation procedures and emergency
+                response for different hazards inside the campus.
+
+            </p>
+
+        </section>
+
+        <div class="stats-grid">
+
+            <div class="stat-card">
+
+                <i class="fa-solid fa-triangle-exclamation"></i>
+
+                <h2>
+
+                    4
+
+                </h2>
+
+                <p>
+
+                    Emergency Guides
+
+                </p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <i class="fa-solid fa-building"></i>
+
+                <h2>
+
+                    2
+
+                </h2>
+
+                <p>
+
+                    Campus Buildings
+
+                </p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <i class="fa-solid fa-layer-group"></i>
+
+                <h2>
+
+                    7
+
+                </h2>
+
+                <p>
+
+                    Floors Covered
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <br>
+
+        <div id="guidesContainer">
+
+            Loading safety guides...
+
+        </div>
+
+    </main>
+
+</div>
+
+<script type="module">
+
+import { loadStudentSidebar }
+from "./js/components/studentSidebar.js";
+
+loadStudentSidebar("guides");
+
+</script>
+
+<script
+    src="js/pages/guides.js">
+
+</script>
+
+</body>
+
+</html>
+```

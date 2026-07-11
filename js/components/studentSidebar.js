@@ -17,7 +17,7 @@ export function loadStudentSidebar(activePage) {
             </li>
 
             <li class="${activePage === "announcements" ? "active" : ""}"
-                onclick="window.location.href='announcements.html'">
+                onclick="window.location.href='announcement.html'">
 
                 <i class="fa-solid fa-bullhorn"></i>
 

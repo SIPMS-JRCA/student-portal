@@ -1,0 +1,265 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>Safety Guide | Safety First</title>
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/guides.css">
+
+</head>
+
+<body>
+
+<header class="topbar">
+
+    <div class="logo">
+
+        <img src="images/logo.png" class="logo-img">
+
+        <span>Safety First</span>
+
+    </div>
+
+    <div class="user-area">
+
+        <button
+            class="btn-primary"
+            onclick="window.location.href='guides.html'">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            Back to Safety Guides
+
+        </button>
+
+    </div>
+
+</header>
+
+<div class="dashboard">
+
+    <aside class="sidebar"></aside>
+
+    <main class="content">
+
+        <div class="card guide-header">
+
+            <h1 id="guideTitle">
+
+                Loading...
+
+            </h1>
+
+            <p id="guideDescription">
+
+                Please wait...
+
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h2>
+
+                <i class="fa-solid fa-building"></i>
+
+                Select Building
+
+            </h2>
+
+            <br>
+
+            <select id="building">
+
+                <option value="main">
+
+                    Main Building
+
+                </option>
+
+                <option value="annex">
+
+                    Annex Building
+
+                </option>
+
+            </select>
+
+            <br><br>
+
+            <h2>
+
+                <i class="fa-solid fa-layer-group"></i>
+
+                Select Floor
+
+            </h2>
+
+            <br>
+
+            <select id="floor">
+
+                <option value="1">Ground Floor</option>
+
+                <option value="2">2nd Floor</option>
+
+                <option value="3">3rd Floor</option>
+
+                <option value="4">4th Floor</option>
+
+                <option value="5">5th Floor</option>
+
+                <option value="6">6th Floor</option>
+
+                <option value="7">7th Floor</option>
+
+            </select>
+
+        </div>
+
+        <div class="card">
+
+            <h2>
+
+                <i class="fa-solid fa-map-location-dot"></i>
+
+                Evacuation Map
+
+            </h2>
+
+            <br>
+
+            <div class="map-placeholder">
+
+                <img
+                    id="evacuationMap"
+                    src="images/maps/placeholder.png"
+                    alt="Evacuation Map">
+
+                <h2 id="mapTitle">
+
+                    Loading...
+
+                </h2>
+
+                <p id="mapLocation"></p>
+
+                <br>
+
+                <p id="mapStatus">
+
+                    Waiting for evacuation map...
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <h2>
+
+                <i class="fa-solid fa-circle-info"></i>
+
+                Map Legend
+
+            </h2>
+
+            <br>
+
+            <div class="legend-grid">
+
+                <div>🟩 Emergency Exit</div>
+
+                <div>🟥 You Are Here</div>
+
+                <div>🟦 Assembly Area</div>
+
+                <div>🧯 Fire Extinguisher</div>
+
+                <div>🚑 First Aid Kit</div>
+
+                <div>🚨 Fire Alarm</div>
+
+                <div>⬇ Staircase</div>
+
+                <div>🚪 Emergency Door</div>
+
+            </div>
+
+        </div>
+
+        <div class="guide-sections">
+
+            <div class="card">
+
+                <h2>
+
+                    Before
+
+                </h2>
+
+                <ul id="beforeList"></ul>
+
+            </div>
+
+            <div class="card">
+
+                <h2>
+
+                    During
+
+                </h2>
+
+                <ul id="duringList"></ul>
+
+            </div>
+
+            <div class="card">
+
+                <h2>
+
+                    After
+
+                </h2>
+
+                <ul id="afterList"></ul>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script type="module">
+
+import { loadStudentSidebar }
+from "./js/components/studentSidebar.js";
+
+loadStudentSidebar("guides");
+
+</script>
+
+<script type="module"
+src="js/pages/guide-details.js"></script>
+
+</body>
+
+</html>
+```

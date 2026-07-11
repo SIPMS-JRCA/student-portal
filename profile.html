@@ -23,15 +23,25 @@
 
     <div class="logo">
 
-        🛡️ <span>Safety First</span>
+        <img src="images/logo.png" class="logo-img">
+
+        <span>Safety First</span>
 
     </div>
 
-    <div class="user-area">
+    <div class="topbar-right">
 
-        <button onclick="window.location.href='dashboard.html'">
+        <span id="welcomeUser">
 
-            ⬅ Dashboard
+            Welcome
+
+        </span>
+
+        <button id="logoutBtn" class="logout-btn">
+
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+            Sign Out
 
         </button>
 
@@ -41,25 +51,7 @@
 
 <div class="dashboard">
 
-    <aside class="sidebar">
-
-        <h2>MENU</h2>
-
-        <ul>
-
-            <li onclick="window.location.href='dashboard.html'">
-                <i class="fa-solid fa-house"></i>
-                Dashboard
-            </li>
-
-            <li onclick="window.location.href='profile.html'">
-                <i class="fa-solid fa-user"></i>
-                My Profile
-            </li>
-
-        </ul>
-
-    </aside>
+    <aside class="sidebar"></aside>
 
     <main class="content">
 
@@ -165,6 +157,15 @@
 </div>
 
 <script type="module" src="js/pages/profile.js"></script>
+
+<script type="module">
+
+import { loadStudentSidebar }
+from "./js/components/studentSidebar.js";
+
+loadStudentSidebar("profile");
+
+</script>
 
 </body>
 
