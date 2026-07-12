@@ -23,6 +23,16 @@ const bioInput = document.getElementById("bio");
 const saveBtn = document.getElementById("saveProfile");
 const passwordBtn = document.getElementById("changePassword");
 
+const passwordModal = document.getElementById("passwordModal");
+
+const newPasswordInput = document.getElementById("newPassword");
+
+const confirmPasswordInput = document.getElementById("confirmPassword");
+
+const cancelPasswordBtn = document.getElementById("cancelPassword");
+
+const confirmPasswordBtn = document.getElementById("confirmPasswordBtn");
+
 let userDocRef = null;
 
 // Load user
@@ -52,6 +62,15 @@ onAuthStateChanged(auth, async (user) => {
     roleInput.value = data.role || "";
     bioInput.value = data.bio || "";
 
+    document.getElementById("overviewUsername").textContent =
+    data.username || "-";
+
+    document.getElementById("overviewEmail").textContent =
+    data.email || "-";
+
+    document.getElementById("overviewRole").textContent =
+    data.role || "-";
+
     if (data.photoURL) {
         profileImage.src = data.photoURL;
     }
@@ -75,11 +94,47 @@ saveBtn.addEventListener("click", async () => {
 });
 
 // Change password
-passwordBtn.addEventListener("click", async () => {
+// =======================
+// Password Modal
+// =======================
 
-    const newPassword = prompt("Enter your new password:");
+passwordBtn.addEventListener("click", () => {
 
-    if (!newPassword) return;
+    passwordModal.classList.add("show");
+
+    newPasswordInput.value = "";
+
+    confirmPasswordInput.value = "";
+
+});
+
+cancelPasswordBtn.addEventListener("click", () => {
+
+    passwordModal.classList.remove("show");
+
+});
+
+confirmPasswordBtn.addEventListener("click", async () => {
+
+    const newPassword = newPasswordInput.value.trim();
+
+    const confirmPassword = confirmPasswordInput.value.trim();
+
+    if (newPassword.length < 6) {
+
+        alert("Password must be at least 6 characters.");
+
+        return;
+
+    }
+
+    if (newPassword !== confirmPassword) {
+
+        alert("Passwords do not match.");
+
+        return;
+
+    }
 
     try {
 
@@ -87,11 +142,25 @@ passwordBtn.addEventListener("click", async () => {
 
         alert("✅ Password updated successfully!");
 
+        passwordModal.classList.remove("show");
+
     }
 
-    catch (error) {
+    catch(error){
 
         alert(error.message);
+
+    }
+
+});
+
+// Close modal when clicking outside
+
+passwordModal.addEventListener("click",(e)=>{
+
+    if(e.target===passwordModal){
+
+        passwordModal.classList.remove("show");
 
     }
 

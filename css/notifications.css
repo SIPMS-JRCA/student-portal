@@ -1,0 +1,93 @@
+/* ==========================================
+   NOTIFICATION PANEL
+========================================== */
+
+.notification-panel{
+
+    position:fixed;
+
+    top:95px;
+
+    right:35px;
+
+    width:340px;
+
+    background:#FFFFFF;
+
+    border-radius:18px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+    padding:20px;
+
+    display:none;
+
+    z-index:9999;
+
+}
+
+.notification-panel.show{
+
+    display:block;
+
+}
+
+.notification-panel h3{
+
+    color:#173A63;
+
+    margin-bottom:15px;
+
+    font-size:20px;
+
+}
+
+#notificationList{
+
+    max-height:350px;
+
+    overflow-y:auto;
+
+}
+
+.notification-item{
+
+    padding:12px 0;
+
+    border-bottom:1px solid #E5E7EB;
+
+}
+
+.notification-item:last-child{
+
+    border-bottom:none;
+
+}
+
+.notification-item h4{
+
+    font-size:15px;
+
+    color:#173A63;
+
+    margin-bottom:5px;
+
+}
+
+.notification-item p{
+
+    font-size:14px;
+
+    color:#64748B;
+
+}
+
+.notification-item small{
+
+    display:block;
+
+    margin-top:6px;
+
+    color:#94A3B8;
+
+}

@@ -28,7 +28,17 @@ function displayAnnouncements(list) {
     if (list.length === 0) {
 
         announcementList.innerHTML = `
-            <p>No announcements available.</p>
+        <div class="empty-state">
+
+            <i class="fa-solid fa-bullhorn"></i>
+
+            <h2>No Announcements Yet</h2>
+
+            <p>
+                New campus announcements will appear here once the administrator publishes one.
+            </p>
+
+        </div>
         `;
 
         return;
@@ -59,33 +69,55 @@ function displayAnnouncements(list) {
 
         announcementList.innerHTML += `
 
-            <div class="announcement-card">
+        <div class="announcement-card">
+
+            <div class="announcement-top">
 
                 <span
                     class="priority-badge"
-                    style="background:${color};"
-                >
+                    style="background:${color};">
+
                     ${item.priority}
+
                 </span>
 
-                <h2>${item.title}</h2>
+                <span class="announcement-date">
 
-                <p>${item.message}</p>
-
-                <small>
-
-                    Posted by <strong>${item.postedBy}</strong>
-
-                    <br>
+                    <i class="fa-solid fa-calendar-days"></i>
 
                     ${date}
 
-                </small>
+                </span>
 
             </div>
 
-        `;
+            <h2>
 
+                ${item.title}
+
+            </h2>
+
+            <p>
+
+                ${item.message}
+
+            </p>
+
+            <div class="announcement-footer">
+
+                <div>
+
+                    <i class="fa-solid fa-user"></i>
+
+                    ${item.postedBy}
+
+                </div>
+
+            </div>
+
+        </div>
+
+        `;
     });
 
 }

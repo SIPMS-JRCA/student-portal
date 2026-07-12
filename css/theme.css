@@ -1,0 +1,419 @@
+/* ==========================================
+   SAFETY FIRST V2 DESIGN SYSTEM
+========================================== */
+
+:root{
+
+    --primary:#1E3A5F;
+    --secondary:#2563EB;
+
+    --fire:#EF4444;
+    --earthquake:#F97316;
+    --flood:#2563EB;
+    --typhoon:#7C3AED;
+
+    --success:#10B981;
+    --warning:#F59E0B;
+    --danger:#DC2626;
+
+    --background:#EEF4FB;
+
+    --white:#FFFFFF;
+
+    --text:#1E293B;
+
+    --gray:#64748B;
+
+    --border:#E2E8F0;
+
+    --shadow:
+
+    0 12px 30px rgba(0,0,0,.08);
+
+    --radius:20px;
+
+}
+
+/* ========================================== */
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+    font-family:
+
+    "Segoe UI",
+
+    sans-serif;
+
+}
+
+body{
+
+    background:var(--background);
+
+    color:var(--text);
+
+}
+
+/* ========================================== */
+
+.card{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:25px;
+
+    box-shadow:var(--shadow);
+
+}
+
+button{
+
+    cursor:pointer;
+
+    border:none;
+
+    border-radius:12px;
+
+    padding:12px 24px;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    transition:.25s;
+
+}
+
+.btn-primary{
+
+    background:var(--secondary);
+
+    color:white;
+
+}
+
+.btn-primary:hover{
+
+    transform:translateY(-3px);
+
+}
+
+.btn-danger{
+
+    background:var(--danger);
+
+    color:white;
+
+}
+
+.btn-danger:hover{
+
+    transform:translateY(-3px);
+
+}
+
+/* ========================================== */
+
+.section-title{
+
+    font-size:36px;
+
+    margin-bottom:10px;
+
+}
+
+.section-subtitle{
+
+    color:var(--gray);
+
+    margin-bottom:35px;
+
+}
+
+/* ========================================== */
+
+.stats-grid{
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(auto-fit,minmax(220px,1fr));
+
+    gap:25px;
+
+}
+
+.stat-card{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:30px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    transition:.25s;
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.stat-card i{
+
+    font-size:45px;
+
+    color:var(--secondary);
+
+    margin-bottom:20px;
+
+}
+
+.stat-card h2{
+
+    font-size:38px;
+
+}
+
+.stat-card p{
+
+    color:var(--gray);
+
+    margin-top:10px;
+
+}
+
+/* ========================================== */
+
+.grid-2{
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(auto-fit,minmax(450px,1fr));
+
+    gap:30px;
+
+}
+
+/* ==========================================
+SIDEBAR V2
+========================================== */
+
+.sidebar{
+
+    width:270px;
+
+    background:linear-gradient(180deg,#1E3A5F,#17304F);
+
+    color:white;
+
+    min-height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    padding:25px 0;
+
+    flex-shrink:0;
+
+}
+
+.sidebar-header{
+
+    text-align:center;
+
+    padding:0 20px;
+
+}
+
+.sidebar-logo{
+
+    width:80px;
+
+    margin-bottom:15px;
+
+}
+
+.sidebar-header h2{
+
+    font-size:24px;
+
+}
+
+.sidebar-header span{
+
+    color:#cbd5e1;
+
+    font-size:14px;
+
+}
+
+.sidebar-menu{
+
+    list-style:none;
+
+    margin-top:35px;
+
+    flex:1;
+
+}
+
+.sidebar-menu li{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    padding:18px 28px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    margin:8px 15px;
+
+    border-radius:12px;
+
+}
+
+.sidebar-menu li:hover{
+
+    background:rgba(255,255,255,.12);
+
+}
+
+.sidebar-menu li.active{
+
+    background:white;
+
+    color:#1E3A5F;
+
+    font-weight:bold;
+
+}
+
+.sidebar-menu li i{
+
+    width:24px;
+
+    text-align:center;
+
+    font-size:18px;
+
+}
+
+.sidebar-footer{
+
+    text-align:center;
+
+    color:#cbd5e1;
+
+    font-size:13px;
+
+    margin-top:auto;
+
+    padding:20px;
+
+}
+
+/* ==========================================
+HERO SECTION
+========================================== */
+
+.hero{
+
+    background:linear-gradient(135deg,#1E3A5F,#2563EB);
+
+    color:white;
+
+    border-radius:24px;
+
+    padding:40px;
+
+    margin-bottom:35px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:30px;
+
+    box-shadow:0 15px 35px rgba(37,99,235,.25);
+
+}
+
+.hero h1{
+
+    font-size:42px;
+
+    margin-bottom:12px;
+
+}
+
+.hero p{
+
+    opacity:.95;
+
+    line-height:1.7;
+
+}
+
+.hero-right{
+
+    display:flex;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+}
+
+.hero-right button{
+
+    background:white;
+
+    color:#1E3A5F;
+
+    font-weight:bold;
+
+}
+
+.hero-right button:hover{
+
+    background:#eef4fb;
+
+}
+
+@media(max-width:900px){
+
+    .hero{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+}

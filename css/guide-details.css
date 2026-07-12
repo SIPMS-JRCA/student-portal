@@ -1,0 +1,297 @@
+/* ==========================================
+   GUIDE DETAILS V2
+========================================== */
+
+/* Page Header */
+
+.page-header{
+
+    margin-bottom:30px;
+
+}
+
+.page-header h1{
+
+    font-size:38px;
+
+    color:#1E3A5F;
+
+    margin-bottom:10px;
+
+}
+
+.page-header p{
+
+    color:#64748B;
+
+    font-size:17px;
+
+}
+
+/* ==========================================
+   Cards
+========================================== */
+
+.card{
+
+    background:white;
+
+    border-radius:22px;
+
+    padding:30px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    margin-bottom:30px;
+
+}
+
+/* ==========================================
+   Floor Selector
+========================================== */
+
+.floor-select{
+
+    width:100%;
+
+    padding:16px 20px;
+
+    border:1px solid #D6DFEA;
+
+    border-radius:14px;
+
+    background:white;
+
+    font-size:16px;
+
+    color:#173A63;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.floor-select:focus{
+
+    outline:none;
+
+    border-color:#2563EB;
+
+    box-shadow:0 0 0 4px rgba(37,99,235,.15);
+
+}
+
+/* ==========================================
+   Evacuation Map
+========================================== */
+
+.map-card{
+
+    text-align:center;
+
+}
+
+.map-card h2{
+
+    margin-bottom:20px;
+
+}
+
+.evacuation-map{
+
+    width:100%;
+
+    height:600px;
+
+    object-fit:contain;
+
+    background:#F8FAFC;
+
+    border:2px dashed #D6DFEA;
+
+    border-radius:18px;
+
+    padding:20px;
+
+    margin:25px 0;
+
+}
+
+#mapLocation{
+
+    color:#1E3A5F;
+
+    font-size:22px;
+
+    margin-bottom:10px;
+
+}
+
+#mapStatus{
+
+    color:#64748B;
+
+    font-size:15px;
+
+}
+
+/* ==========================================
+   Legend
+========================================== */
+
+.legend-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:18px;
+
+    margin-top:25px;
+
+}
+
+.legend-grid div{
+
+    background:#F8FAFC;
+
+    border-radius:14px;
+
+    padding:18px;
+
+    text-align:center;
+
+    font-weight:600;
+
+    color:#334155;
+
+}
+
+/* ==========================================
+   Safety Tips
+========================================== */
+
+.tips-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,minmax(320px,1fr));
+
+    gap:25px;
+
+    margin-top:30px;
+
+    align-items:start;
+
+}
+
+.tips-grid .card{
+
+    width:100%;
+
+    min-height:100%;
+
+}
+
+.tips-grid ul{
+
+    list-style:none;
+
+    padding:0;
+
+    margin-top:20px;
+
+}
+
+.tips-grid li{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:12px;
+
+    padding:14px 0;
+
+    border-bottom:1px solid #EEF2F7;
+
+    line-height:1.7;
+
+    color:#475569;
+
+}
+
+.tips-grid li:last-child{
+
+    border-bottom:none;
+
+}
+
+.tips-grid li i{
+
+    color:#22C55E;
+
+    margin-top:4px;
+
+    font-size:18px;
+
+}
+
+/* ==========================================
+   Responsive
+========================================== */
+
+@media (max-width:1000px){
+
+    .tips-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .page-header h1{
+
+        font-size:30px;
+
+    }
+
+    .legend-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .card{
+
+        padding:22px;
+
+    }
+
+    .evacuation-map{
+
+        min-height:320px;
+
+    }
+
+}
+
+.tips-grid .card h2{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-size:26px;
+
+    margin-bottom:10px;
+
+}

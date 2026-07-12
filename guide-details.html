@@ -1,265 +1,270 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-    <meta name="viewport"
-    content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Safety Guide | Safety First</title>
+<title>Building Guide | Safety First</title>
 
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/theme.css">
+<link rel="stylesheet" href="css/dashboard-v2.css">
+<link rel="stylesheet" href="css/guide-details.css">
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/dashboard.css">
-    <link rel="stylesheet" href="css/guides.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
 </head>
 
 <body>
 
-<header class="topbar">
+<header class="topbar-v2">
 
-    <div class="logo">
+<div class="brand">
 
-        <img src="images/logo.png" class="logo-img">
+<img src="images/logo.png" class="brand-logo">
 
-        <span>Safety First</span>
+<div>
 
-    </div>
+<h2>Safety First</h2>
 
-    <div class="user-area">
+<span>Campus Safety Information System</span>
 
-        <button
-            class="btn-primary"
-            onclick="window.location.href='guides.html'">
+</div>
 
-            <i class="fa-solid fa-arrow-left"></i>
+</div>
 
-            Back to Safety Guides
+<div class="topbar-actions">
 
-        </button>
+<button id="notificationBell" class="icon-btn">
 
-    </div>
+<i class="fa-solid fa-bell"></i>
+
+<span id="notificationCount">0</span>
+
+</button>
+
+<div class="user-info">
+
+<div class="avatar">
+
+<i class="fa-solid fa-user"></i>
+
+</div>
+
+<div>
+
+<strong id="welcomeUser">
+
+Welcome
+
+</strong>
+
+<p>Student</p>
+
+</div>
+
+</div>
+
+<button id="logoutBtn" class="logout-btn">
+
+<i class="fa-solid fa-right-from-bracket"></i>
+
+Sign Out
+
+</button>
+
+</div>
 
 </header>
 
+<div id="notificationPanel" class="notification-panel">
+
+<h3>Notifications</h3>
+
+<div id="notificationList">
+
+No notifications.
+
+</div>
+
+</div>
+
 <div class="dashboard">
 
-    <aside class="sidebar"></aside>
+<aside class="sidebar"></aside>
 
-    <main class="content">
+<main class="content">
 
-        <div class="card guide-header">
+<section class="page-header">
 
-            <h1 id="guideTitle">
+    <h1 id="guideTitle">
 
-                Loading...
+        🏢 Building Guide
 
-            </h1>
+    </h1>
 
-            <p id="guideDescription">
+    <p id="guideDescription">
 
-                Please wait...
+        View evacuation maps and emergency information.
 
-            </p>
+    </p>
 
-        </div>
+</section>
 
-        <div class="card">
+<div class="card">
 
-            <h2>
+    <h2>
 
-                <i class="fa-solid fa-building"></i>
+        <i class="fa-solid fa-layer-group"></i>
 
-                Select Building
+        Select Floor
 
-            </h2>
+    </h2>
 
-            <br>
+    <br>
 
-            <select id="building">
+    <select id="floorSelect" class="floor-select">
 
-                <option value="main">
+        <option value="1">Ground Floor</option>
 
-                    Main Building
+        <option value="2">2nd Floor</option>
 
-                </option>
+        <option value="3">3rd Floor</option>
 
-                <option value="annex">
+        <option value="4">4th Floor</option>
 
-                    Annex Building
+        <option value="5">5th Floor</option>
 
-                </option>
+        <option value="6">6th Floor</option>
 
-            </select>
+        <option value="7">7th Floor</option>
 
-            <br><br>
+    </select>
 
-            <h2>
+</div>
 
-                <i class="fa-solid fa-layer-group"></i>
+<div class="card map-card">
 
-                Select Floor
+    <h2>
 
-            </h2>
+        <i class="fa-solid fa-map-location-dot"></i>
 
-            <br>
+        Evacuation Map
 
-            <select id="floor">
+    </h2>
 
-                <option value="1">Ground Floor</option>
+    <img
 
-                <option value="2">2nd Floor</option>
+    id="evacuationMap"
 
-                <option value="3">3rd Floor</option>
+    src="images/maps/placeholder.png"
 
-                <option value="4">4th Floor</option>
+    class="evacuation-map"
 
-                <option value="5">5th Floor</option>
+    alt="Evacuation Map">
 
-                <option value="6">6th Floor</option>
+    <h3 id="mapLocation">
 
-                <option value="7">7th Floor</option>
+        Main Building • Ground Floor
 
-            </select>
+    </h3>
 
-        </div>
+    <p id="mapStatus">
 
-        <div class="card">
+        Evacuation map will appear here after upload.
 
-            <h2>
+    </p>
 
-                <i class="fa-solid fa-map-location-dot"></i>
+</div>
 
-                Evacuation Map
+<div class="card">
 
-            </h2>
+    <h2>
 
-            <br>
+        🗺 Map Legend
 
-            <div class="map-placeholder">
+    </h2>
 
-                <img
-                    id="evacuationMap"
-                    src="images/maps/placeholder.png"
-                    alt="Evacuation Map">
+    <div class="legend-grid">
 
-                <h2 id="mapTitle">
+        <div>🟩 Emergency Exit</div>
 
-                    Loading...
+        <div>🧯 Fire Extinguisher</div>
 
-                </h2>
+        <div>🚑 First Aid Station</div>
 
-                <p id="mapLocation"></p>
+        <div>🚨 Fire Alarm</div>
 
-                <br>
+        <div>⬇ Staircase</div>
 
-                <p id="mapStatus">
+        <div>📍 Assembly Area</div>
 
-                    Waiting for evacuation map...
+    </div>
 
-                </p>
+</div>
 
-            </div>
+<div class="tips-grid">
 
-        </div>
+    <div class="card">
 
-        <div class="card">
+        <h2>
 
-            <h2>
+            Before
 
-                <i class="fa-solid fa-circle-info"></i>
+        </h2>
 
-                Map Legend
+        <ul id="beforeList"></ul>
 
-            </h2>
+    </div>
 
-            <br>
+    <div class="card">
 
-            <div class="legend-grid">
+        <h2>
 
-                <div>🟩 Emergency Exit</div>
+            During
 
-                <div>🟥 You Are Here</div>
+        </h2>
 
-                <div>🟦 Assembly Area</div>
+        <ul id="duringList"></ul>
 
-                <div>🧯 Fire Extinguisher</div>
+    </div>
 
-                <div>🚑 First Aid Kit</div>
+    <div class="card">
 
-                <div>🚨 Fire Alarm</div>
+        <h2>
 
-                <div>⬇ Staircase</div>
+            After
 
-                <div>🚪 Emergency Door</div>
+        </h2>
 
-            </div>
+        <ul id="afterList"></ul>
 
-        </div>
+    </div>
 
-        <div class="guide-sections">
+</div>
 
-            <div class="card">
-
-                <h2>
-
-                    Before
-
-                </h2>
-
-                <ul id="beforeList"></ul>
-
-            </div>
-
-            <div class="card">
-
-                <h2>
-
-                    During
-
-                </h2>
-
-                <ul id="duringList"></ul>
-
-            </div>
-
-            <div class="card">
-
-                <h2>
-
-                    After
-
-                </h2>
-
-                <ul id="afterList"></ul>
-
-            </div>
-
-        </div>
-
-    </main>
+</main>
 
 </div>
 
 <script type="module">
 
 import { loadStudentSidebar }
+
 from "./js/components/studentSidebar.js";
 
 loadStudentSidebar("guides");
 
 </script>
 
-<script type="module"
-src="js/pages/guide-details.js"></script>
+<script type="module" src="js/pages/guide-details.js"></script>
+
+<script type="module" src="js/components/notifications.js"></script>
 
 </body>
 
 </html>
-```

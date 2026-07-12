@@ -1,0 +1,243 @@
+/* ==========================================
+   SAFETY GUIDES V2
+========================================== */
+
+/* Page Header */
+
+.page-header{
+
+    margin-bottom:40px;
+
+}
+
+.page-header h1{
+
+    font-size:40px;
+
+    color:#1E3A5F;
+
+    margin-bottom:10px;
+
+}
+
+.page-header p{
+
+    color:#64748B;
+
+    font-size:17px;
+
+    max-width:750px;
+
+    line-height:1.7;
+
+}
+
+/* ==========================================
+   Building Grid
+========================================== */
+
+.building-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(360px,1fr));
+
+    gap:30px;
+
+    width:100%;
+
+}
+
+/* ==========================================
+   Building Card
+========================================== */
+
+.building-card{
+
+    position:relative;
+
+    display:flex;
+
+    flex-direction:column;
+
+    background:#fff;
+
+    border-radius:22px;
+
+    padding:35px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+    transition:.25s;
+
+    overflow:hidden;
+
+}
+
+.building-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.15);
+
+}
+
+.building-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:100%;
+
+    height:6px;
+
+    background:#2563EB;
+
+}
+
+/* ==========================================
+   Icon
+========================================== */
+
+.building-icon{
+
+    width:80px;
+
+    height:80px;
+
+    background:#EEF4FB;
+
+    border-radius:20px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:42px;
+
+    margin-bottom:25px;
+
+}
+
+/* ==========================================
+   Titles
+========================================== */
+
+.building-card h2{
+
+    color:#1E3A5F;
+
+    font-size:30px;
+
+    margin-bottom:8px;
+
+}
+
+.building-subtitle{
+
+    color:#64748B;
+
+    margin-bottom:25px;
+
+}
+
+/* ==========================================
+   Feature List
+========================================== */
+
+.building-features{
+
+    list-style:none;
+
+    padding:0;
+
+    margin:0 0 30px;
+
+    flex:1;
+
+}
+
+.building-features li{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:15px;
+
+    color:#475569;
+
+    font-size:16px;
+
+}
+
+.building-features i{
+
+    width:22px;
+
+    color:#22C55E;
+
+    text-align:center;
+
+}
+
+/* ==========================================
+   Button
+========================================== */
+
+.building-card .btn-primary{
+
+    width:100%;
+
+    margin-top:auto;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:15px;
+
+    font-size:16px;
+
+    border-radius:14px;
+
+}
+
+/* ==========================================
+   Responsive
+========================================== */
+
+@media (max-width:900px){
+
+    .building-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .page-header h1{
+
+        font-size:34px;
+
+    }
+
+    .building-card{
+
+        padding:28px;
+
+    }
+
+}

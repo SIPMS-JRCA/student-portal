@@ -1,26 +1,38 @@
 @import url("auth.css");
-@import url("dashboard.css");
+/* @import url("dashboard.css"); */
 @import url("admin.css");
 @import url("profile.css");
 /* @import "guides.css"; */
 @import url("notifications.css");
 @import url("responsive.css");
 
-/* Global Styles */
+/* ==========================================
+   GLOBAL RESET
+========================================== */
 
 *{
+
     margin:0;
+
     padding:0;
+
     box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
 }
 
 body{
 
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:"Segoe UI", Arial, sans-serif;
 
-    background:#eef5fd;
+    background:#EEF4FB;
 
-    color:#1E3A5F;
+    color:#1E293B;
 
 }
 
@@ -32,10 +44,26 @@ a{
 
 }
 
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
 button{
 
     cursor:pointer;
 
-    transition:.3s;
+    transition:.25s;
+
+}
+
+input,
+select,
+textarea{
+
+    font:inherit;
 
 }

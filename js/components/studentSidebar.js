@@ -3,56 +3,72 @@ export function loadStudentSidebar(activePage) {
     const sidebar = document.querySelector(".sidebar");
 
     sidebar.innerHTML = `
-        <h2>MENU</h2>
 
-        <ul>
+        <div class="sidebar-header">
 
-            <li class="${activePage === "dashboard" ? "active" : ""}"
-                onclick="window.location.href='dashboard.html'">
+            <img src="images/logo.png" class="sidebar-logo">
+
+            <h2>Safety First</h2>
+
+            <span>Student Portal</span>
+
+        </div>
+
+        <ul class="sidebar-menu">
+
+            <li class="${activePage==="dashboard"?"active":""}"
+                onclick="location.href='dashboard.html'">
 
                 <i class="fa-solid fa-house"></i>
 
-                Dashboard
+                <span>Dashboard</span>
 
             </li>
 
-            <li class="${activePage === "announcements" ? "active" : ""}"
-                onclick="window.location.href='announcement.html'">
+            <li class="${activePage==="announcements"?"active":""}"
+                onclick="location.href='announcements.html'">
 
                 <i class="fa-solid fa-bullhorn"></i>
 
-                Announcements
+                <span>Announcements</span>
 
             </li>
 
-            <li class="${activePage === "guides" ? "active" : ""}"
-                onclick="window.location.href='guides.html'">
+            <li class="${activePage==="guides"?"active":""}"
+                onclick="location.href='guides.html'">
 
-                <i class="fa-solid fa-book"></i>
+                <i class="fa-solid fa-book-open"></i>
 
-                Safety Guides
+                <span>Safety Guides</span>
 
             </li>
 
-            <li class="${activePage === "contacts" ? "active" : ""}"
-                onclick="window.location.href='contacts.html'">
+            <li class="${activePage==="contacts"?"active":""}"
+                onclick="location.href='contacts.html'">
 
                 <i class="fa-solid fa-phone"></i>
 
-                Emergency Contacts
+                <span>Emergency Contacts</span>
 
             </li>
 
-            <li class="${activePage === "profile" ? "active" : ""}"
-                onclick="window.location.href='profile.html'">
+            <li class="${activePage==="profile"?"active":""}"
+                onclick="location.href='profile.html'">
 
                 <i class="fa-solid fa-user"></i>
 
-                Profile
+                <span>Profile</span>
 
             </li>
 
         </ul>
+
+        <div class="sidebar-footer">
+
+            Version 2.0
+
+        </div>
+
     `;
 
 }

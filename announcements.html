@@ -8,7 +8,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <title>Emergency Contacts | Safety First</title>
+    <title>Announcements | Safety First</title>
 
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
@@ -19,7 +19,7 @@
 
     <link rel="stylesheet" href="css/dashboard-v2.css">
 
-    <link rel="stylesheet" href="css/contacts.css">
+    <link rel="stylesheet" href="css/announcements.css">
     
 </head>
 
@@ -106,16 +106,36 @@
         <section class="page-header">
 
             <h1>
-                📞 Emergency Contacts
+
+                📢 Announcements
+
             </h1>
 
             <p>
-                Quick access to important emergency hotline numbers.
+
+                Stay updated with the latest campus safety announcements.
+
             </p>
 
         </section>
 
-        <section class="contacts-grid">
+        <section class="search-section">
+
+            <input
+
+                type="text"
+
+                id="searchAnnouncement"
+
+                placeholder="🔍 Search announcements..."
+
+            >
+
+        </section>
+
+        <section id="announcementList" class="announcement-grid">
+
+            Loading announcements...
 
         </section>
 
@@ -128,11 +148,11 @@
 import { loadStudentSidebar }
 from "./js/components/studentSidebar.js";
 
-loadStudentSidebar("contacts");
+loadStudentSidebar("announcements");
 
 </script>
 
-<script type="module" src="js/pages/contacts.js"></script>
+<script type="module" src="js/pages/announcements.js"></script>
 
 <script type="module" src="js/components/notifications.js"></script>
 

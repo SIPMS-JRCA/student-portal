@@ -1,55 +1,79 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Safety Guides | Safety First</title>
+<title>Safety Guides | Safety First</title>
 
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/theme.css">
+<link rel="stylesheet" href="css/dashboard-v2.css">
+<link rel="stylesheet" href="css/guides.css">
 
-    <link rel="stylesheet" href="css/style.css">
-
-    <link rel="stylesheet" href="css/dashboard.css">
-
-    <link rel="stylesheet" href="css/guides.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
 </head>
 
 <body>
 
-<header class="topbar">
+<header class="topbar-v2">
 
-    <div class="logo">
+    <div class="brand">
 
-        <img
-            src="images/logo.png"
-            class="logo-img">
+        <img src="images/logo.png" class="brand-logo">
 
-        <span>
+        <div>
 
-            Safety First
+            <h2>Safety First</h2>
 
-        </span>
+            <span>Campus Safety Information System</span>
+
+        </div>
 
     </div>
 
-    <div class="user-area">
+    <div class="topbar-actions">
 
-        <button
-            class="btn-primary"
-            onclick="window.location.href='dashboard.html'">
+        <button id="notificationBell" class="icon-btn">
 
-            <i class="fa-solid fa-house"></i>
+            <i class="fa-solid fa-bell"></i>
 
-            Dashboard
+            <span id="notificationCount">0</span>
+
+        </button>
+
+        <div class="user-info">
+
+            <div class="avatar">
+
+                <i class="fa-solid fa-user"></i>
+
+            </div>
+
+            <div>
+
+                <strong id="welcomeUser">
+
+                    Welcome
+
+                </strong>
+
+                <p>Student</p>
+
+            </div>
+
+        </div>
+
+        <button id="logoutBtn" class="logout-btn">
+
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+            Sign Out
 
         </button>
 
@@ -57,96 +81,197 @@
 
 </header>
 
+<div id="notificationPanel" class="notification-panel">
+
+    <h3>Notifications</h3>
+
+    <div id="notificationList">
+
+        No notifications.
+
+    </div>
+
+</div>
+
 <div class="dashboard">
 
     <aside class="sidebar"></aside>
 
     <main class="content">
 
-        <section class="page-title">
+        <section class="page-header">
 
             <h1>
 
-                <i class="fa-solid fa-book-open"></i>
-
-                Campus Emergency Preparedness Guide
+                📚 Safety Guides
 
             </h1>
 
             <p>
 
-                Learn the proper evacuation procedures and emergency
-                response for different hazards inside the campus.
+                Choose a building below to access evacuation maps, emergency exits,
+                fire extinguisher locations, first aid stations, and emergency
+                procedures for every floor.
 
             </p>
 
         </section>
 
-        <div class="stats-grid">
+        <section class="building-grid">
 
-            <div class="stat-card">
+            <!-- MAIN BUILDING -->
 
-                <i class="fa-solid fa-triangle-exclamation"></i>
+            <article class="building-card">
 
-                <h2>
+                <div class="building-icon">
 
-                    4
+                    🏢
 
-                </h2>
+                </div>
 
-                <p>
+                <h2>Main Building</h2>
 
-                    Emergency Guides
+                <p class="building-subtitle">
 
-                </p>
-
-            </div>
-
-            <div class="stat-card">
-
-                <i class="fa-solid fa-building"></i>
-
-                <h2>
-
-                    2
-
-                </h2>
-
-                <p>
-
-                    Campus Buildings
+                    7 Floors • Complete Emergency Guide
 
                 </p>
 
-            </div>
+                <ul class="building-features">
 
-            <div class="stat-card">
+                    <li>
 
-                <i class="fa-solid fa-layer-group"></i>
+                        <i class="fa-solid fa-map-location-dot"></i>
 
-                <h2>
+                        Evacuation Maps
 
-                    7
+                    </li>
 
-                </h2>
+                    <li>
 
-                <p>
+                        <i class="fa-solid fa-door-open"></i>
 
-                    Floors Covered
+                        Emergency Exits
+
+                    </li>
+
+                    <li>
+
+                        <i class="fa-solid fa-fire-extinguisher"></i>
+
+                        Fire Extinguishers
+
+                    </li>
+
+                    <li>
+
+                        <i class="fa-solid fa-kit-medical"></i>
+
+                        First Aid Stations
+
+                    </li>
+
+                    <li>
+
+                        <i class="fa-solid fa-users"></i>
+
+                        Assembly Areas
+
+                    </li>
+
+                </ul>
+
+                <button
+
+                    class="btn-primary"
+
+                    onclick="location.href='guide-details.html?building=main'">
+
+                    Open Main Building
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+            </article>
+
+            <!-- ANNEX BUILDING -->
+
+            <article class="building-card">
+
+                <div class="building-icon">
+
+                    🏢
+
+                </div>
+
+                <h2>Annex Building</h2>
+
+                <p class="building-subtitle">
+
+                    7 Floors • Complete Emergency Guide
 
                 </p>
 
-            </div>
+                <ul class="building-features">
 
-        </div>
+                    <li>
 
-        <br>
+                        <i class="fa-solid fa-map-location-dot"></i>
 
-        <div id="guidesContainer">
+                        Evacuation Maps
 
-            Loading safety guides...
+                    </li>
 
-        </div>
+                    <li>
+
+                        <i class="fa-solid fa-door-open"></i>
+
+                        Emergency Exits
+
+                    </li>
+
+                    <li>
+
+                        <i class="fa-solid fa-fire-extinguisher"></i>
+
+                        Fire Extinguishers
+
+                    </li>
+
+                    <li>
+
+                        <i class="fa-solid fa-kit-medical"></i>
+
+                        First Aid Stations
+
+                    </li>
+
+                    <li>
+
+                        <i class="fa-solid fa-users"></i>
+
+                        Assembly Areas
+
+                    </li>
+
+                </ul>
+
+                <button
+
+                    class="btn-primary"
+
+                    onclick="location.href='guide-details.html?building=annex'">
+
+                    Open Annex Building
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+            </article>
+
+        </section>
 
     </main>
 
@@ -155,18 +280,17 @@
 <script type="module">
 
 import { loadStudentSidebar }
+
 from "./js/components/studentSidebar.js";
 
 loadStudentSidebar("guides");
 
 </script>
 
-<script
-    src="js/pages/guides.js">
+<script type="module"
 
-</script>
+src="js/components/notifications.js"></script>
 
 </body>
 
 </html>
-```

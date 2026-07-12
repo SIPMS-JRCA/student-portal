@@ -1,26 +1,60 @@
-/* ===========================
-   Profile Page
-=========================== */
+/* ==========================================
+   PROFILE PAGE
+========================================== */
+
+.page-header{
+
+    margin-bottom:35px;
+
+}
+
+.page-header h1{
+
+    font-size:40px;
+
+    color:#1E3A5F;
+
+    margin-bottom:10px;
+
+}
+
+.page-header p{
+
+    color:#64748B;
+
+    font-size:17px;
+
+}
+
+/* ========================================== */
+
+.profile-layout{
+
+    display:grid;
+
+    grid-template-columns:320px 1fr;
+
+    gap:30px;
+
+    align-items:start;
+
+}
+
+/* ========================================== */
 
 .profile-card{
 
     background:white;
 
-    border-radius:20px;
+    border-radius:22px;
 
-    padding:40px;
+    padding:35px;
 
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-
-}
-
-.profile-card h1{
-
-    color:#1E3A5F;
-
-    margin-bottom:30px;
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
 
 }
+
+/* ========================================== */
 
 .profile-header{
 
@@ -30,25 +64,35 @@
 
     align-items:center;
 
-    gap:15px;
-
-    margin-bottom:35px;
+    text-align:center;
 
 }
 
 .profile-image{
 
-    width:150px;
+    width:170px;
 
-    height:150px;
-
-    border-radius:50%;
+    height:170px;
 
     object-fit:cover;
 
-    border:5px solid #2563EB;
+    border-radius:50%;
+
+    border:6px solid #2563EB;
+
+    margin-bottom:25px;
 
 }
+
+.profile-header button{
+
+    width:100%;
+
+}
+
+/* ==========================================
+   PROFILE FORM
+========================================== */
 
 .profile-form{
 
@@ -56,7 +100,7 @@
 
     flex-direction:column;
 
-    gap:20px;
+    gap:22px;
 
 }
 
@@ -70,26 +114,30 @@
 
 .form-group label{
 
-    margin-bottom:8px;
+    color:#1E3A5F;
 
     font-weight:600;
 
-    color:#1E3A5F;
+    margin-bottom:8px;
 
 }
 
 .form-group input,
 .form-group textarea{
 
-    padding:14px;
+    width:100%;
 
-    border:1px solid #d1d5db;
+    padding:15px 18px;
 
-    border-radius:10px;
+    border:1px solid #D1D5DB;
+
+    border-radius:14px;
 
     font-size:16px;
 
-    transition:.3s;
+    transition:.25s;
+
+    background:#F8FAFC;
 
 }
 
@@ -100,9 +148,23 @@
 
     border-color:#2563EB;
 
-    box-shadow:0 0 0 3px rgba(37,99,235,.2);
+    background:white;
+
+    box-shadow:0 0 0 4px rgba(37,99,235,.15);
 
 }
+
+.form-group textarea{
+
+    resize:vertical;
+
+    min-height:120px;
+
+}
+
+/* ==========================================
+   BUTTONS
+========================================== */
 
 .button-group{
 
@@ -110,9 +172,36 @@
 
     gap:15px;
 
-    margin-top:15px;
+    margin-top:10px;
 
     flex-wrap:wrap;
+
+}
+
+.primary-btn,
+.secondary-btn{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    padding:14px 24px;
+
+    border:none;
+
+    border-radius:14px;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.25s;
 
 }
 
@@ -122,44 +211,243 @@
 
     color:white;
 
-    border:none;
-
-    padding:14px 22px;
-
-    border-radius:10px;
-
-    cursor:pointer;
-
-    font-size:16px;
-
 }
 
 .primary-btn:hover{
 
     background:#1D4ED8;
 
+    transform:translateY(-3px);
+
 }
 
 .secondary-btn{
 
-    background:#F3F4F6;
+    background:#EEF4FB;
 
     color:#1E3A5F;
-
-    border:none;
-
-    padding:14px 22px;
-
-    border-radius:10px;
-
-    cursor:pointer;
-
-    font-size:16px;
 
 }
 
 .secondary-btn:hover{
 
-    background:#E5E7EB;
+    background:#E2E8F0;
+
+    transform:translateY(-3px);
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media(max-width:900px){
+
+    .profile-layout{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .profile-card{
+
+        padding:28px;
+
+    }
+
+    .button-group{
+
+        flex-direction:column;
+
+    }
+
+    .primary-btn,
+    .secondary-btn{
+
+        width:100%;
+
+    }
+
+}
+
+/* ==========================================
+ACCOUNT OVERVIEW
+========================================== */
+
+.profile-section-title{
+
+    color:#1E3A5F;
+
+    margin-bottom:22px;
+
+    font-size:24px;
+
+}
+
+.profile-info-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+    margin-bottom:35px;
+
+}
+
+.info-box{
+
+    background:#F8FAFC;
+
+    border-radius:16px;
+
+    padding:20px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+.info-box i{
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    background:#2563EB;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:22px;
+
+}
+
+.info-box small{
+
+    display:block;
+
+    color:#64748B;
+
+    margin-bottom:6px;
+
+}
+
+.info-box strong{
+
+    color:#1E3A5F;
+
+    font-size:18px;
+
+}
+
+@media(max-width:900px){
+
+.profile-info-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+/* ==========================================
+PASSWORD MODAL
+========================================== */
+
+.modal{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:9999;
+
+}
+
+.modal.show{
+
+    display:flex;
+
+}
+
+.modal-content{
+
+    width:420px;
+
+    max-width:90%;
+
+    background:white;
+
+    border-radius:22px;
+
+    padding:35px;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.25);
+
+}
+
+.modal-content h2{
+
+    color:#1E3A5F;
+
+    margin-bottom:25px;
+
+}
+
+.modal-content input{
+
+    width:100%;
+
+    padding:15px;
+
+    margin-bottom:18px;
+
+    border:1px solid #D1D5DB;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+}
+
+.modal-content input:focus{
+
+    outline:none;
+
+    border-color:#2563EB;
+
+    box-shadow:0 0 0 4px rgba(37,99,235,.15);
+
+}
+
+.modal-buttons{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    gap:12px;
+
+    margin-top:10px;
 
 }

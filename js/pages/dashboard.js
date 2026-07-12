@@ -138,29 +138,41 @@ if (announcement.createdAt) {
 
 announcementBox.innerHTML = `
 
-<h3 style="color:${priorityColor}">
+<div class="announcement-card">
 
-${announcement.priority} • ${announcement.title}
+    <span
+        class="priority-badge"
+        style="background:${priorityColor};">
 
-</h3>
+        ${announcement.priority}
 
-<p>
+    </span>
 
-${announcement.message}
+    <h2>
 
-</p>
+        ${announcement.title}
 
-<br>
+    </h2>
 
-<small>
+    <p>
 
-Posted by ${announcement.postedBy}
+        ${announcement.message}
 
-<br>
+    </p>
 
-🕒 ${date}
+    <hr>
 
-</small>
+    <small>
+
+        👤 ${announcement.postedBy}
+
+        <br>
+
+        🕒 ${date}
+
+    </small>
+
+</div>
 
 `;
 
@@ -259,3 +271,57 @@ onSnapshot(recentQuery,(snapshot)=>{
     });
 
 });
+
+// ======================================
+// Demo Emergency Alert
+// ======================================
+
+// Change this to:
+// "normal"
+// "warning"
+// "danger"
+
+const emergencyStatus = "safe";
+
+const banner =
+document.getElementById("alertBanner");
+
+const title =
+document.getElementById("alertTitle");
+
+const message =
+document.getElementById("alertMessage");
+
+const instruction =
+document.getElementById("alertInstruction");
+
+const badge =
+document.getElementById("alertBadge");
+
+if(emergencyStatus==="warning"){
+
+    banner.className="status-card warning";
+
+    title.textContent="🟠 Earthquake Drill";
+
+    message.innerHTML="<strong>Earthquake Drill in Progress</strong>";
+
+    instruction.textContent="Proceed calmly to your designated evacuation area.";
+
+    badge.textContent="DRILL";
+
+}
+
+if(emergencyStatus==="danger"){
+
+    banner.className="status-card danger";
+
+    title.textContent="🔴 Fire Emergency";
+
+    message.innerHTML="<strong>Fire Emergency</strong>";
+
+    instruction.textContent="Evacuate immediately using the nearest safe exit.";
+
+    badge.textContent="ALERT";
+
+}
