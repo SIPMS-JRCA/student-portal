@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Flood Safety Guide | Safety First</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/theme.css">
+<link rel="stylesheet" href="css/dashboard-v2.css">
+<link rel="stylesheet" href="css/fire-guide.css">
+
+</head>
+
+<body>
+
+<header class="topbar-v2">
+
+<div class="brand">
+
+<img src="images/JRCA LOGO.jpg" class="brand-logo">
+
+<div>
+
+<h2>JESUS REIGNS CHRISTIAN ACADEMY</h2>
+
+<span>Safety Information and Preparedness Management System</span>
+
+</div>
+
+</div>
+
+<div class="topbar-actions">
+
+<button id="notificationBell" class="icon-btn">
+
+<i class="fa-solid fa-bell"></i>
+
+<span id="notificationCount">0</span>
+
+</button>
+
+<div class="user-info">
+
+<div class="avatar">
+
+<i class="fa-solid fa-user"></i>
+
+</div>
+
+<div>
+
+<strong id="welcomeUser">
+
+Welcome
+
+</strong>
+
+<p>Student</p>
+
+</div>
+
+</div>
+
+<button id="logoutBtn" class="logout-btn">
+
+<i class="fa-solid fa-right-from-bracket"></i>
+
+Sign Out
+
+</button>
+
+</div>
+
+</header>
+
+<div id="notificationPanel" class="notification-panel">
+
+<h3>Notifications</h3>
+
+<div id="notificationList">
+
+No notifications.
+
+</div>
+
+</div>
+
+<div class="dashboard">
+
+<aside class="sidebar"></aside>
+
+<main class="content">
+
+<section class="guide-hero">
+
+<h1>🌊 Flood Safety Guide</h1>
+
+<p>
+
+Learn how to prepare before, stay safe during, and recover after flooding.
+
+</p>
+
+</section>
+
+<section class="guide-card" id="overview">
+
+<h2>
+
+<i class="fa-solid fa-circle-info"></i>
+
+Overview
+
+</h2>
+
+<p>
+
+Floods can happen suddenly during heavy rains or typhoons. Knowing what to do before, during, and after a flood helps protect lives and reduces risks.
+
+</p>
+
+</section>
+
+<section class="guide-card">
+
+<h2>
+
+🌊 Flood Warning Levels
+
+</h2>
+
+<div class="race-grid">
+
+<div class="race-box">
+
+<h3>🟢</h3>
+
+<h4>Prepare</h4>
+
+<p>
+
+Monitor weather updates and prepare emergency supplies.
+
+</p>
+
+</div>
+
+<div class="race-box">
+
+<h3>🟡</h3>
+
+<h4>Be Ready</h4>
+
+<p>
+
+Be prepared to evacuate if floodwaters continue rising.
+
+</p>
+
+</div>
+
+<div class="race-box">
+
+<h3>🔴</h3>
+
+<h4>Evacuate</h4>
+
+<p>
+
+Move immediately to higher ground when instructed.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="guide-card" id="beforeFire">
+
+<h2>
+
+🌧 Before a Flood
+
+</h2>
+
+<ul>
+
+<li>Monitor weather advisories.</li>
+
+<li>Prepare an emergency go bag.</li>
+
+<li>Know the nearest evacuation center.</li>
+
+<li>Charge mobile phones and power banks.</li>
+
+<li>Keep important documents in waterproof bags.</li>
+
+</ul>
+
+</section>
+
+<section class="guide-card" id="duringFire">
+
+<h2>
+
+🚨 During a Flood
+
+</h2>
+
+<ul>
+
+<li>Move to higher ground immediately.</li>
+
+<li>Avoid walking through floodwaters.</li>
+
+<li>Stay away from rivers and drainage canals.</li>
+
+<li>Turn off electricity if instructed.</li>
+
+<li>Follow evacuation orders.</li>
+
+</ul>
+
+</section>
+
+<section class="guide-card" id="afterFire">
+
+<h2>
+
+✅ After a Flood
+
+</h2>
+
+<ul>
+
+<li>Wait until authorities declare the area safe.</li>
+
+<li>Avoid contaminated floodwater.</li>
+
+<li>Check for damaged electrical wires.</li>
+
+<li>Drink only clean or boiled water.</li>
+
+<li>Report hazards to school officials.</li>
+
+</ul>
+
+</section>
+
+</main>
+
+</div>
+
+<script type="module">
+
+import { loadStudentSidebar }
+
+from "./js/components/studentSidebar.js";
+
+loadStudentSidebar("guides");
+
+</script>
+
+<script type="module"
+src="js/components/notifications.js"></script>
+
+</body>
+
+</html>

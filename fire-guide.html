@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Fire Safety Guide | Safety First</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/theme.css">
+<link rel="stylesheet" href="css/dashboard-v2.css">
+<link rel="stylesheet" href="css/fire-guide.css">
+
+</head>
+
+<body>
+
+<header class="topbar-v2">
+
+<div class="brand">
+
+<img src="images/JRCA LOGO.jpg" class="brand-logo">
+
+<div>
+
+<h2>JESUS REIGNS CHRISTIAN ACADEMY</h2>
+
+<span>Safety Information and Preparedness Management System</span>
+
+</div>
+
+</div>
+
+<div class="topbar-actions">
+
+<button id="notificationBell" class="icon-btn">
+
+<i class="fa-solid fa-bell"></i>
+
+<span id="notificationCount">0</span>
+
+</button>
+
+<div class="user-info">
+
+<div class="avatar">
+
+<i class="fa-solid fa-user"></i>
+
+</div>
+
+<div>
+
+<strong id="welcomeUser">
+
+Welcome
+
+</strong>
+
+<p>Student</p>
+
+</div>
+
+</div>
+
+<button id="logoutBtn" class="logout-btn">
+
+<i class="fa-solid fa-right-from-bracket"></i>
+
+Sign Out
+
+</button>
+
+</div>
+
+</header>
+
+<div id="notificationPanel" class="notification-panel">
+
+<h3>Notifications</h3>
+
+<div id="notificationList">
+
+No notifications.
+
+</div>
+
+</div>
+
+<div class="dashboard">
+
+<aside class="sidebar"></aside>
+
+<main class="content">
+
+<section class="guide-hero">
+
+<h1>🔥 Fire Safety Guide</h1>
+
+<p>
+
+Learn how to prepare, respond, and recover safely during fire emergencies.
+
+</p>
+
+</section>
+
+<section class="guide-card" id="overview">
+
+<h2>
+
+<i class="fa-solid fa-circle-info"></i>
+
+Overview
+
+</h2>
+
+<p>
+
+Fire emergencies can spread rapidly and threaten lives within minutes. Every student should know how to prevent fires, respond calmly during emergencies, evacuate safely, and follow school procedures.
+
+</p>
+
+</section>
+
+<section class="guide-card" id="beforeFire">
+
+<section class="guide-card">
+
+<h2>
+
+🚨 RACE Fire Procedure
+
+</h2>
+
+<div class="race-grid">
+
+<div class="race-box">
+
+<h3>R</h3>
+
+<h4>Rescue</h4>
+
+<p>
+
+Help anyone in immediate danger if it is safe.
+
+</p>
+
+</div>
+
+<div class="race-box">
+
+<h3>A</h3>
+
+<h4>Alarm</h4>
+
+<p>
+
+Activate the nearest fire alarm and notify authorities.
+
+</p>
+
+</div>
+
+<div class="race-box">
+
+<h3>C</h3>
+
+<h4>Confine</h4>
+
+<p>
+
+Close doors to slow the spread of smoke and flames.
+
+</p>
+
+</div>
+
+<div class="race-box">
+
+<h3>E</h3>
+
+<h4>Evacuate</h4>
+
+<p>
+
+Leave immediately using the nearest safe exit.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<h2>
+
+🔥 Before a Fire
+
+</h2>
+
+<ul>
+
+<li>Know the nearest emergency exits.</li>
+
+<li>Locate fire extinguishers.</li>
+
+<li>Avoid overloading electrical outlets.</li>
+
+<li>Report damaged electrical equipment.</li>
+
+<li>Participate in fire drills seriously.</li>
+
+</ul>
+
+</section>
+
+<section class="guide-card" id="duringFire">
+
+<h2>
+
+🚨 During a Fire
+
+</h2>
+
+<ul>
+
+<li>Stay calm.</li>
+
+<li>Activate the nearest fire alarm.</li>
+
+<li>Leave immediately using the nearest exit.</li>
+
+<li>Never use elevators.</li>
+
+<li>Stay low if smoke is present.</li>
+
+<li>Proceed directly to the assembly area.</li>
+
+</ul>
+
+</section>
+
+<section class="guide-card" id="afterFire">
+
+<h2>
+
+✅ After a Fire
+
+</h2>
+
+<ul>
+
+<li>Wait for official clearance.</li>
+
+<li>Do not re-enter the building.</li>
+
+<li>Report missing classmates immediately.</li>
+
+<li>Seek medical attention if needed.</li>
+
+</ul>
+
+</section>
+
+</main>
+
+</div>
+
+<script type="module">
+
+import { loadStudentSidebar }
+
+from "./js/components/studentSidebar.js";
+
+loadStudentSidebar("guides");
+
+</script>
+
+<script type="module"
+src="js/components/notifications.js"></script>
+
+</body>
+
+</html>

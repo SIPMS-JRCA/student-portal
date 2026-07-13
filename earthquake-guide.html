@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Earthquake Safety Guide | Safety First</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/theme.css">
+<link rel="stylesheet" href="css/dashboard-v2.css">
+<link rel="stylesheet" href="css/fire-guide.css">
+
+</head>
+
+<body>
+
+<header class="topbar-v2">
+
+<div class="brand">
+
+<img src="images/JRCA LOGO.jpg" class="brand-logo">
+
+<div>
+
+<h2>JESUS REIGNS CHRISTIAN ACADEMY</h2>
+
+<span>Safety Information and Preparedness Management System</span>
+
+</div>
+
+</div>
+
+<div class="topbar-actions">
+
+<button id="notificationBell" class="icon-btn">
+
+<i class="fa-solid fa-bell"></i>
+
+<span id="notificationCount">0</span>
+
+</button>
+
+<div class="user-info">
+
+<div class="avatar">
+
+<i class="fa-solid fa-user"></i>
+
+</div>
+
+<div>
+
+<strong id="welcomeUser">
+
+Welcome
+
+</strong>
+
+<p>Student</p>
+
+</div>
+
+</div>
+
+<button id="logoutBtn" class="logout-btn">
+
+<i class="fa-solid fa-right-from-bracket"></i>
+
+Sign Out
+
+</button>
+
+</div>
+
+</header>
+
+<div id="notificationPanel" class="notification-panel">
+
+<h3>Notifications</h3>
+
+<div id="notificationList">
+
+No notifications.
+
+</div>
+
+</div>
+
+<div class="dashboard">
+
+<aside class="sidebar"></aside>
+
+<main class="content">
+
+<section class="guide-hero">
+
+<h1>🌎 Earthquake Safety Guide</h1>
+
+<p>
+
+Learn how to prepare before, stay safe during, and recover after an earthquake.
+
+</p>
+
+</section>
+
+<section class="guide-card" id="overview">
+
+<h2>
+
+<i class="fa-solid fa-circle-info"></i>
+
+Overview
+
+</h2>
+
+<p>
+
+Earthquakes happen without warning. Every student should know how to protect themselves, evacuate safely, and remain calm during and after an earthquake.
+
+</p>
+
+</section>
+
+<section class="guide-card">
+
+<h2>
+
+🦺 Duck, Cover, Hold
+
+</h2>
+
+<div class="race-grid">
+
+<div class="race-box">
+
+<h3>🦆</h3>
+
+<h4>Duck</h4>
+
+<p>
+
+Get down immediately to prevent being knocked over.
+
+</p>
+
+</div>
+
+<div class="race-box">
+
+<h3>🪑</h3>
+
+<h4>Cover</h4>
+
+<p>
+
+Take cover under a sturdy desk or table.
+
+</p>
+
+</div>
+
+<div class="race-box">
+
+<h3>✊</h3>
+
+<h4>Hold</h4>
+
+<p>
+
+Hold on until the shaking completely stops.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="guide-card" id="beforeFire">
+
+<h2>
+
+ 🌎 Before an Earthquake
+
+</h2>
+
+<ul>
+
+<li>Know the nearest emergency exits.</li>
+
+<li>Locate fire extinguishers.</li>
+
+<li>Avoid overloading electrical outlets.</li>
+
+<li>Report damaged electrical equipment.</li>
+
+<li>Participate in fire drills seriously.</li>
+
+</ul>
+
+</section>
+
+<section class="guide-card" id="duringFire">
+
+<h2>
+
+🚨 During a Fire
+
+</h2>
+
+<ul>
+
+<li>Stay calm.</li>
+
+<li>Activate the nearest fire alarm.</li>
+
+<li>Leave immediately using the nearest exit.</li>
+
+<li>Never use elevators.</li>
+
+<li>Stay low if smoke is present.</li>
+
+<li>Proceed directly to the assembly area.</li>
+
+</ul>
+
+</section>
+
+<section class="guide-card" id="afterFire">
+
+<h2>
+
+✅ After a Fire
+
+</h2>
+
+<ul>
+
+<li>Wait for official clearance.</li>
+
+<li>Do not re-enter the building.</li>
+
+<li>Report missing classmates immediately.</li>
+
+<li>Seek medical attention if needed.</li>
+
+</ul>
+
+</section>
+
+</main>
+
+</div>
+
+<script type="module">
+
+import { loadStudentSidebar }
+
+from "./js/components/studentSidebar.js";
+
+loadStudentSidebar("guides");
+
+</script>
+
+<script type="module"
+src="js/components/notifications.js"></script>
+
+</body>
+
+</html>

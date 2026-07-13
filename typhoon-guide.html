@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Typhoon Safety Guide | Safety First</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/theme.css">
+<link rel="stylesheet" href="css/dashboard-v2.css">
+<link rel="stylesheet" href="css/fire-guide.css">
+
+</head>
+
+<body>
+
+<header class="topbar-v2">
+
+<div class="brand">
+
+<img src="images/JRCA LOGO.jpg" class="brand-logo">
+
+<div>
+
+<h2>JESUS REIGNS CHRISTIAN ACADEMY</h2>
+
+<span>Safety Information and Preparedness Management System</span>
+
+</div>
+
+</div>
+
+<div class="topbar-actions">
+
+<button id="notificationBell" class="icon-btn">
+
+<i class="fa-solid fa-bell"></i>
+
+<span id="notificationCount">0</span>
+
+</button>
+
+<div class="user-info">
+
+<div class="avatar">
+
+<i class="fa-solid fa-user"></i>
+
+</div>
+
+<div>
+
+<strong id="welcomeUser">
+
+Welcome
+
+</strong>
+
+<p>Student</p>
+
+</div>
+
+</div>
+
+<button id="logoutBtn" class="logout-btn">
+
+<i class="fa-solid fa-right-from-bracket"></i>
+
+Sign Out
+
+</button>
+
+</div>
+
+</header>
+
+<div id="notificationPanel" class="notification-panel">
+
+<h3>Notifications</h3>
+
+<div id="notificationList">
+
+No notifications.
+
+</div>
+
+</div>
+
+<div class="dashboard">
+
+<aside class="sidebar"></aside>
+
+<main class="content">
+
+<section class="guide-hero">
+
+<h1>🌀 Typhoon Safety Guide</h1>
+
+<p>
+
+Learn how to prepare before, stay safe during, and recover after a typhoon.
+
+</p>
+
+</section>
+
+<section class="guide-card" id="overview">
+
+<h2>
+
+<i class="fa-solid fa-circle-info"></i>
+
+Overview
+
+</h2>
+
+<p>
+
+Typhoons can bring strong winds, heavy rainfall, flooding, and power outages. Proper preparation and following school emergency procedures help keep everyone safe.
+
+</p>
+
+</section>
+
+<section class="guide-card">
+
+<h2>
+
+🌀 Typhoon Safety Stages
+
+</h2>
+
+<div class="race-grid">
+
+<div class="race-box">
+
+<h3>📦</h3>
+
+<h4>Prepare</h4>
+
+<p>
+
+Monitor weather updates and prepare emergency supplies.
+
+</p>
+
+</div>
+
+<div class="race-box">
+
+<h3>🏫</h3>
+
+<h4>Stay Indoors</h4>
+
+<p>
+
+Remain inside classrooms or designated safe areas.
+
+</p>
+
+</div>
+
+<div class="race-box">
+
+<h3>✅</h3>
+
+<h4>Recover</h4>
+
+<p>
+
+Wait until authorities declare conditions safe.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="guide-card" id="beforeFire">
+
+<h2>
+
+🌤 Before a Typhoon
+
+</h2>
+
+<ul>
+
+<li>Monitor weather advisories.</li>
+
+<li>Prepare emergency supplies.</li>
+
+<li>Charge electronic devices.</li>
+
+<li>Secure loose outdoor objects.</li>
+
+<li>Know evacuation routes and assembly areas.</li>
+
+</ul>
+
+</section>
+
+<section class="guide-card" id="duringFire">
+
+<h2>
+
+🌧 During a Typhoon
+
+</h2>
+
+<ul>
+
+<li>Stay indoors.</li>
+
+<li>Keep away from windows.</li>
+
+<li>Do not go outside during strong winds.</li>
+
+<li>Use flashlights instead of candles if possible.</li>
+
+<li>Follow school officials' instructions.</li>
+
+</ul>
+
+</section>
+
+<section class="guide-card" id="afterFire">
+
+<h2>
+
+☀ After a Typhoon
+
+</h2>
+
+<ul>
+
+<li>Watch out for fallen electrical wires.</li>
+
+<li>Avoid flooded areas.</li>
+
+<li>Report damaged facilities.</li>
+
+<li>Wait for official announcements before returning to classrooms.</li>
+
+<li>Continue monitoring weather updates.</li>
+
+</ul>
+
+</section>
+
+</main>
+
+</div>
+
+<script type="module">
+
+import { loadStudentSidebar }
+
+from "./js/components/studentSidebar.js";
+
+loadStudentSidebar("guides");
+
+</script>
+
+<script type="module"
+src="js/components/notifications.js"></script>
+
+</body>
+
+</html>

@@ -6,9 +6,7 @@ export function loadStudentSidebar(activePage) {
 
         <div class="sidebar-header">
 
-            <img src="images/logo.png" class="sidebar-logo">
-
-            <h2>Safety First</h2>
+            <h2>MENU</h2>
 
             <span>Student Portal</span>
 
