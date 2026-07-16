@@ -790,45 +790,117 @@ QUICK ACTIONS
 
 }
 
+/* ==========================
+   MOBILE TOP BAR
+========================== */
+
 @media (max-width:768px){
 
-    .content{
+.topbar-v2{
 
-        padding:20px;
+    height:auto;
 
-    }
+    padding:12px 15px;
 
-    .hero{
+    display:flex;
 
-        padding:30px;
+    justify-content:space-between;
 
-    }
+    align-items:center;
 
-    .hero-left h1{
+}
 
-        font-size:34px;
+/* Left side */
 
-    }
+.topbar-left{
 
-    .section-title{
+    display:flex;
 
-        font-size:28px;
+    align-items:center;
 
-    }
+    gap:10px;
 
-    .dashboard-card{
+    flex:1;
 
-        padding:24px;
+}
 
-    }
+/* Right side */
 
-    .status-badge{
+.topbar-right{
 
-        width:100%;
+    display:flex;
 
-        text-align:center;
+    align-items:center;
 
-    }
+    justify-content:flex-end;
+
+}
+
+/* Logo */
+
+.brand{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+.brand-logo{
+
+    width:42px;
+
+    height:42px;
+
+}
+
+/* Hide long text */
+
+.brand-text h2{
+
+    font-size:0;
+
+}
+
+.brand-text span{
+
+    font-size:0;
+
+}
+
+/* Show JRCA */
+
+.brand-text h2::before{
+
+    content:"JRCA";
+
+    font-size:24px;
+
+    font-weight:700;
+
+    color:#1E3A5F;
+
+    display:block;
+
+}
+
+/* Show abbreviated system name */
+
+.brand-text span::before{
+
+    content:"SIPMS";
+
+    font-size:12px;
+
+    color:#64748B;
+
+    display:block;
+
+    margin-top:3px;
+
+}
 
 }
 
