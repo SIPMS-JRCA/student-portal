@@ -4,9 +4,7 @@
 <head>
 
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Safety First Dashboard</title>
 
@@ -31,11 +29,20 @@
         </button>
 
         <div class="brand">
-            <img src="images/JRCA LOGO.jpg" class="brand-logo">
+
+            <img src="images/JRCA LOGO.jpg"
+                 alt="JRCA Logo"
+                 class="brand-logo">
 
             <div class="brand-text">
-                <h2 class="desktop-title">JESUS REIGNS CHRISTIAN ACADEMY</h2>
-                <h2 class="mobile-title">JRCA</h2>
+
+                <h2 class="desktop-title">
+                    JESUS REIGNS CHRISTIAN ACADEMY
+                </h2>
+
+                <h2 class="mobile-title">
+                    JRCA
+                </h2>
 
                 <span class="desktop-subtitle">
                     Safety Information and Preparedness Management System
@@ -44,7 +51,9 @@
                 <span class="mobile-subtitle">
                     SIPMS
                 </span>
+
             </div>
+
         </div>
 
     </div>
@@ -65,11 +74,7 @@
 
 <div id="notificationPanel" class="notification-panel">
 
-    <h3>
-
-        Notifications
-
-    </h3>
+    <h3>Notifications</h3>
 
     <div id="notificationList">
 
@@ -81,112 +86,115 @@
 
 <div class="dashboard">
 
+    <!-- Sidebar is filled by studentSidebar.js -->
     <aside class="sidebar"></aside>
 
     <main class="content">
+
+        <!-- HERO -->
 
         <section class="hero">
 
             <div class="hero-left">
 
                 <h1 id="greeting">
-
                     Good Morning!
-
                 </h1>
 
                 <p id="currentDate">
-
                     Loading date...
-
                 </p>
 
                 <p id="usernameDisplay">
-
                     Welcome back.
-
                 </p>
 
             </div>
 
         </section>
 
-<div class="stats-grid">
+        <!-- STATS -->
 
-    <div class="stat-card">
+        <div class="stats-grid">
 
-        <i class="fa-solid fa-bullhorn"></i>
+            <div class="stat-card">
 
-        <h2 id="announcementCount">0</h2>
+                <i class="fa-solid fa-bullhorn"></i>
 
-        <p>Announcements</p>
+                <h2 id="announcementCount">0</h2>
 
-    </div>
+                <p>Announcements</p>
 
-    <div class="stat-card">
+            </div>
 
-        <i class="fa-solid fa-bell"></i>
+            <div class="stat-card">
 
-        <h2 id="notificationCountCard">0</h2>
+                <i class="fa-solid fa-bell"></i>
 
-        <p>Notifications</p>
+                <h2 id="notificationCountCard">0</h2>
 
-    </div>
+                <p>Notifications</p>
 
-    <div class="stat-card">
+            </div>
 
-        <i class="fa-solid fa-book-open"></i>
+            <div class="stat-card">
 
-        <h2>4</h2>
+                <i class="fa-solid fa-book-open"></i>
 
-        <p>Safety Guides</p>
+                <h2>4</h2>
 
-    </div>
+                <p>Safety Guides</p>
 
-    <div class="stat-card">
+            </div>
 
-        <i class="fa-solid fa-phone"></i>
+            <div class="stat-card">
 
-        <h2>4</h2>
+                <i class="fa-solid fa-phone"></i>
 
-        <p>Emergency Contacts</p>
+                <h2>4</h2>
 
-    </div>
+                <p>Emergency Contacts</p>
 
-</div>
+            </div>
 
-<section id="alertBanner" class="status-card normal">
+        </div>
 
-    <div>
+        <!-- STATUS -->
 
-        <h2 id="alertTitle">
+        <section id="alertBanner" class="status-card normal">
 
-            🟢 Campus Safety Status
+            <div>
 
-        </h2>
+                <h2 id="alertTitle">
 
-        <p id="alertMessage">
+                    🟢 Campus Safety Status
 
-            Current Status:
-            <strong>Normal Operations</strong>
+                </h2>
 
-        </p>
+                <p id="alertMessage">
 
-        <small id="alertInstruction">
+                    Current Status:
+                    <strong>Normal Operations</strong>
 
-            No active emergency alerts.
+                </p>
 
-        </small>
+                <small id="alertInstruction">
 
-    </div>
+                    No active emergency alerts.
 
-    <div id="alertBadge" class="status-badge">
+                </small>
 
-        SAFE
+            </div>
 
-    </div>
+            <div id="alertBadge" class="status-badge">
 
-</section>
+                SAFE
+
+            </div>
+
+        </section>
+
+        <!-- DASHBOARD GRID -->
 
         <div class="dashboard-grid">
 
@@ -217,15 +225,12 @@
                 <ul>
 
                     <li>🚓 Police — 911</li>
-
                     <br>
 
                     <li>🚒 Fire Department — 911</li>
-
                     <br>
 
                     <li>🚑 Ambulance — 911</li>
-
                     <br>
 
                     <li>🏫 School Office</li>
@@ -236,23 +241,23 @@
 
         </div>
 
-<br>
+        <!-- RECENT ACTIVITY -->
 
-<div class="dashboard-card">
+        <div class="dashboard-card">
 
-    <h2>
+            <h2>
 
-        🕒 Recent Activity
+                🕒 Recent Activity
 
-    </h2>
+            </h2>
 
-    <div id="recentActivity">
+            <div id="recentActivity">
 
-        Loading activity...
+                Loading activity...
 
-    </div>
+            </div>
 
-</div>
+        </div>
 
     </main>
 
