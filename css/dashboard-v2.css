@@ -809,21 +809,28 @@ a{
 
 .topbar-v2{
 
+    height:60px;
+
+    padding:0 10px;
+
     display:flex;
-    justify-content:space-between;
+
     align-items:center;
 
-    padding:10px 14px;
+    justify-content:space-between;
 
 }
 
 .topbar-left{
 
     display:flex;
+
     align-items:center;
-    gap:10px;
+
+    gap:8px;
 
     flex:1;
+
     min-width:0;
 
 }
@@ -831,34 +838,60 @@ a{
 .topbar-right{
 
     display:flex;
+
     align-items:center;
 
-    margin-left:10px;
+    justify-content:flex-end;
+
+    flex-shrink:0;
 
 }
 
 .brand{
 
     display:flex;
+
     align-items:center;
 
+    gap:8px;
+
     min-width:0;
+
+    overflow:hidden;
 
 }
 
 .brand-logo{
 
-    width:42px;
-    height:42px;
+    width:34px;
+
+    height:34px;
+
+    flex-shrink:0;
 
 }
 
-.icon-btn{
+.brand-text{
 
-    width:46px;
-    height:46px;
+    min-width:0;
 
-    flex-shrink:0;
+    overflow:hidden;
+
+}
+
+.mobile-title{
+
+    font-size:18px;
+
+    line-height:1;
+
+}
+
+.mobile-subtitle{
+
+    font-size:9px;
+
+    line-height:1;
 
 }
 
@@ -866,8 +899,9 @@ a{
 
 #menuBtn{
 
-    width:42px;
-    height:42px;
+    width:40px;
+
+    height:40px;
 
     font-size:18px;
 
@@ -932,7 +966,10 @@ a{
 .icon-btn{
 
     width:40px;
+
     height:40px;
+
+    flex-shrink:0;
 
 }
 
