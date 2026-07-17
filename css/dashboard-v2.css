@@ -303,9 +303,7 @@ body{
 
     list-style:none;
 
-    padding:4px 8px;
-
-    flex:1;
+    padding:8px;
 
 }
 
@@ -363,7 +361,9 @@ body{
 
 .sidebar-footer{
 
-    padding:12px;
+    margin-top:auto;
+
+    padding:16px;
 
     text-align:center;
 
@@ -432,9 +432,16 @@ body{
 
 }
 
+.hero-left{
+
+    flex:1;
+
+}
+
 .hero-left h1{
 
     font-size:42px;
+
     margin-bottom:10px;
 
 }
@@ -454,6 +461,8 @@ body{
     gap:15px;
 
     flex-wrap:wrap;
+
+    align-items:center;
 
 }
 
@@ -645,99 +654,128 @@ body{
    RESPONSIVE
 ===================================================== */
 
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
 @media (max-width:768px){
 
     /* ---------- TOP BAR ---------- */
 
     .topbar-v2{
 
-        height:auto;
+        height:72px;
 
-        padding:12px 15px;
+        padding:0 14px;
+
+        display:flex;
+
+        justify-content:space-between;
+
+        align-items:center;
 
     }
 
     .topbar-left{
 
-        flex:1;
-
         display:flex;
+
         align-items:center;
 
         gap:10px;
+
+        flex:1;
+
+        min-width:0;
 
     }
 
     .topbar-right{
 
         display:flex;
+
         align-items:center;
 
         justify-content:flex-end;
 
     }
 
+    #menuBtn{
+
+        width:42px;
+        height:42px;
+
+        font-size:18px;
+
+    }
+
+    .icon-btn{
+
+        width:42px;
+        height:42px;
+
+    }
+
+    /* ---------- BRAND ---------- */
+
     .brand{
+
+        display:flex;
+
+        align-items:center;
 
         gap:10px;
 
-    }
+        flex:1;
 
-    .brand{
-    display:flex;
-    align-items:center;
-    gap:15px;
-    flex:1;
-    min-width:0;
-}
+        min-width:0;
+
+    }
 
     .brand-logo{
 
-    width:42px;
-    height:42px;
+        width:42px;
+        height:42px;
 
-    min-width:42px;
-    min-height:42px;
-
-    max-width:42px;
-    max-height:42px;
-
-    object-fit:contain;
-
-    flex-shrink:0;
+        flex-shrink:0;
 
     }
 
-    .brand-text{
-        display:flex;
-        flex-direction:column;
-        justify-content:center;
-        line-height:1.2;
-        overflow:hidden;
+    .desktop-title,
+    .desktop-subtitle{
+
+        display:none;
+
     }
 
-    .brand-text h2{
-        margin:0;
+    .mobile-title,
+    .mobile-subtitle{
+
+        display:block;
+
+    }
+
+    .mobile-title{
+
         font-size:18px;
+
         font-weight:700;
+
         color:#1E3A5F;
+
+        line-height:1.1;
+
     }
 
-    .brand-text span{
-        margin-top:3px;
-        font-size:14px;
+    .mobile-subtitle{
+
+        font-size:9px;
+
         color:#64748B;
-    }
 
-    .brand-text h2{
+        letter-spacing:.5px;
 
-        font-size:20px;
-
-    }
-
-    .brand-text span{
-
-        font-size:11px;
+        line-height:1.2;
 
     }
 
@@ -748,39 +786,88 @@ body{
         position:fixed;
 
         left:-230px;
+
         top:0;
 
         width:230px;
+
         height:100vh;
 
         z-index:3000;
 
-        transition:left .30s ease;
+        transition:left .3s ease;
 
     }
 
     .sidebar.open{
 
         left:0;
+
         width:230px;
 
     }
 
-    .sidebar.open .sidebar-header h2,
-    .sidebar.open .sidebar-header span,
-    .sidebar.open .sidebar-menu span,
-    .sidebar.open .sidebar-footer{
+    .sidebar-header{
 
-        display:block;
+        padding:14px 12px 8px;
 
     }
 
-    .sidebar.open .sidebar-menu li{
+    .sidebar-header h2{
 
-        justify-content:flex-start;
-        height:42px;
-        padding:0 14px;
+        font-size:18px;
+
+        margin-bottom:2px;
+
+    }
+
+    .sidebar-header span{
+
+        font-size:11px;
+
+    }
+
+    .sidebar-menu{
+
+        padding:6px;
+
+    }
+
+    .sidebar-menu li{
+
+        height:40px;
+
+        padding:0 12px;
+
+        margin:3px 0;
+
         gap:10px;
+
+        border-radius:9px;
+
+    }
+
+    .sidebar-menu li i{
+
+        width:18px;
+
+        font-size:16px;
+
+    }
+
+    .sidebar-menu li span{
+
+        font-size:13px;
+
+    }
+
+    .sidebar-footer{
+
+        margin-top:auto;
+
+        padding:12px;
+
+        font-size:11px;
 
     }
 
@@ -806,7 +893,7 @@ body{
 
     .hero-left h1{
 
-        font-size:32px;
+        font-size:30px;
 
     }
 
@@ -842,9 +929,9 @@ body{
 
         flex-direction:column;
 
-        gap:20px;
-
         text-align:center;
+
+        gap:18px;
 
     }
 
@@ -855,159 +942,3 @@ body{
     }
 
 }
-
-/* =====================================================
-   NOTIFICATION BUTTON
-===================================================== */
-
-.icon-btn{
-
-    width:48px;
-    height:48px;
-
-    border:none;
-    border-radius:50%;
-
-    background:#EEF4FB;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    cursor:pointer;
-
-    position:relative;
-
-    transition:.25s;
-
-    color:#1E3A5F;
-
-}
-
-.icon-btn:hover{
-
-    background:#2563EB;
-    color:#fff;
-
-}
-
-.icon-btn span{
-
-    position:absolute;
-
-    top:-5px;
-    right:-5px;
-
-    width:20px;
-    height:20px;
-
-    border-radius:50%;
-
-    background:#DC2626;
-
-    color:#fff;
-
-    font-size:11px;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-}
-
-/* =====================================================
-   CARDS
-===================================================== */
-
-.card,
-.dashboard-card,
-.stat-card{
-
-    transition:.25s ease;
-
-}
-
-.card:hover,
-.dashboard-card:hover,
-.stat-card:hover{
-
-    transform:translateY(-4px);
-
-}
-
-/* =====================================================
-   LINKS
-===================================================== */
-
-a{
-
-    text-decoration:none;
-    color:inherit;
-
-}
-
-/* =====================================================
-   SCROLLBAR
-===================================================== */
-
-::-webkit-scrollbar{
-
-    width:8px;
-
-}
-
-::-webkit-scrollbar-thumb{
-
-    background:#2563EB;
-    border-radius:20px;
-
-}
-
-::-webkit-scrollbar-track{
-
-    background:#EEF4FB;
-
-}
-
-/* =====================================================
-   DESKTOP IMPROVEMENTS
-===================================================== */
-
-@media (min-width:769px){
-
-    .dashboard{
-
-        display:flex;
-
-    }
-
-    .content{
-
-        padding:35px;
-
-    }
-
-    .hero{
-
-        min-height:180px;
-
-    }
-
-    .brand-text h2{
-
-        font-size:22px;
-
-    }
-
-    .brand-text span{
-
-        font-size:13px;
-
-    }
-
-}
-
-/* =====================================================
-   MOBILE BRAND
-===================================================== */
-
