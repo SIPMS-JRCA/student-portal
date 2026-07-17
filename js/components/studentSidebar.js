@@ -51,13 +51,15 @@ export function loadStudentSidebar(activePage) {
 
     const menuBtn = document.getElementById("menuBtn");
 
-    if (menuBtn) {
+    if (menuBtn && sidebar) {
 
-        menuBtn.onclick = () => {
+        menuBtn.addEventListener("click", (e) => {
+
+            e.stopPropagation();
 
             sidebar.classList.toggle("open");
 
-        };
+        });
 
     }
 
