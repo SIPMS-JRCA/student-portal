@@ -1,0 +1,163 @@
+/* ==========================================
+   STUDENT DRILL SCHEDULE
+========================================== */
+
+.page-header{
+
+    margin-bottom:30px;
+
+}
+
+.page-header h1{
+
+    color:#1E3A5F;
+
+    margin-bottom:8px;
+
+}
+
+.page-header p{
+
+    color:#64748B;
+
+}
+
+#drillList{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+.drill-card{
+
+    background:white;
+
+    border-left:8px solid #2563EB;
+
+    border-radius:18px;
+
+    padding:24px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+    transition:.25s;
+
+}
+
+.drill-card:hover{
+
+    transform:translateY(-3px);
+
+}
+
+.drill-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+    margin-bottom:18px;
+
+}
+
+.drill-title{
+
+    font-size:22px;
+
+    font-weight:700;
+
+    color:#1E3A5F;
+
+}
+
+.drill-type{
+
+    background:#2563EB;
+
+    color:white;
+
+    padding:8px 16px;
+
+    border-radius:999px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+}
+
+.drill-location{
+
+    margin:12px 0;
+
+    color:#334155;
+
+    font-size:15px;
+
+}
+
+.drill-date{
+
+    color:#475569;
+
+    font-size:15px;
+
+    margin-bottom:8px;
+
+}
+
+.drill-time{
+
+    color:#475569;
+
+    font-size:15px;
+
+}
+
+.empty-drills{
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:60px;
+
+    text-align:center;
+
+    color:#64748B;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+.empty-drills i{
+
+    font-size:70px;
+
+    color:#CBD5E1;
+
+    margin-bottom:20px;
+
+}
+
+@media(max-width:768px){
+
+.drill-header{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+}
+
+}

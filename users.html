@@ -19,29 +19,69 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
 
 <body>
 
-<header class="topbar">
+<header class="topbar-v2">
 
-<div class="logo">
+    <div class="topbar-left">
 
-<img src="images/logo.png" class="logo-img">
+        <button id="menuBtn" class="icon-btn">
 
-<span>Safety First</span>
+            <i class="fa-solid fa-bars"></i>
 
-</div>
+        </button>
 
-<div class="user-area">
+        <div class="brand">
 
-<span id="adminName"></span>
+            <img src="images/JRCA LOGO.jpg" class="brand-logo">
 
-<button id="logoutBtn" class="btn-primary">
+            <div class="brand-text">
 
-<i class="fa-solid fa-right-from-bracket"></i>
+                <h2 class="desktop-title">
 
-Sign Out
+                    JESUS REIGNS CHRISTIAN ACADEMY
 
-</button>
+                </h2>
 
-</div>
+                <h2 class="mobile-title">
+
+                    JRCA
+
+                </h2>
+
+                <span class="desktop-subtitle">
+
+                   Safety Information & Preparedness Management System
+
+                </span>
+
+                <span class="mobile-subtitle">
+
+                    SIPMS
+
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="topbar-right">
+
+        <button id="notificationBell" class="icon-btn">
+
+            <i class="fa-solid fa-bell"></i>
+
+            <span id="notificationCount">0</span>
+
+        </button>
+
+        <button id="logoutBtn" class="icon-btn">
+
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+        </button>
+
+    </div>
 
 </header>
 

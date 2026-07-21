@@ -1,0 +1,195 @@
+/* ==========================================================
+   ADMIN USERS PAGE
+========================================================== */
+
+.table-container{
+
+    overflow-x:auto;
+
+}
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+thead{
+
+    background:#F8FAFC;
+
+}
+
+th{
+
+    padding:18px;
+
+    text-align:left;
+
+    color:#1E3A5F;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    border-bottom:2px solid #E5E7EB;
+
+}
+
+td{
+
+    padding:18px;
+
+    border-bottom:1px solid #E5E7EB;
+
+    vertical-align:middle;
+
+}
+
+tbody tr{
+
+    transition:.25s;
+
+}
+
+tbody tr:hover{
+
+    background:#F8FAFC;
+
+}
+
+.role-badge{
+
+    display:inline-block;
+
+    padding:6px 14px;
+
+    border-radius:999px;
+
+    font-size:12px;
+
+    font-weight:700;
+
+}
+
+.role-admin{
+
+    background:#DBEAFE;
+
+    color:#1D4ED8;
+
+}
+
+.role-student{
+
+    background:#DCFCE7;
+
+    color:#15803D;
+
+}
+
+.status-active{
+
+    display:inline-block;
+
+    padding:6px 14px;
+
+    border-radius:999px;
+
+    background:#DCFCE7;
+
+    color:#166534;
+
+    font-size:12px;
+
+    font-weight:700;
+
+}
+
+.action-buttons{
+
+    display:flex;
+
+    gap:10px;
+
+}
+
+.action-btn{
+
+    width:38px;
+
+    height:38px;
+
+    border:none;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    color:white;
+
+}
+
+.edit-btn{
+
+    background:#2563EB;
+
+}
+
+.edit-btn:hover{
+
+    background:#1D4ED8;
+
+    transform:translateY(-2px);
+
+}
+
+.delete-btn{
+
+    background:#DC2626;
+
+}
+
+.delete-btn:hover{
+
+    background:#B91C1C;
+
+    transform:translateY(-2px);
+
+}
+
+#searchUser{
+
+    max-width:450px;
+
+}
+
+.empty-users{
+
+    text-align:center;
+
+    padding:50px;
+
+    color:#64748B;
+
+}
+
+@media(max-width:768px){
+
+table{
+
+    min-width:700px;
+
+}
+
+.action-buttons{
+
+    justify-content:center;
+
+}
+
+}

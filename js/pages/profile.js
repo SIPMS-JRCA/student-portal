@@ -2,7 +2,8 @@ import { auth, db } from "../firebase.js";
 
 import {
     onAuthStateChanged,
-    updatePassword
+    updatePassword,
+    signOut
 } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-auth.js";
 
 import {
@@ -22,6 +23,7 @@ const bioInput = document.getElementById("bio");
 
 const saveBtn = document.getElementById("saveProfile");
 const passwordBtn = document.getElementById("changePassword");
+const logoutBtn = document.getElementById("logoutBtn");
 
 const passwordModal = document.getElementById("passwordModal");
 
@@ -161,6 +163,30 @@ passwordModal.addEventListener("click",(e)=>{
     if(e.target===passwordModal){
 
         passwordModal.classList.remove("show");
+
+    }
+
+});
+
+// =======================
+// Logout
+// =======================
+
+logoutBtn.addEventListener("click", async () => {
+
+    try {
+
+        await signOut(auth);
+
+        window.location.href = "login.html";
+
+    }
+
+    catch (error) {
+
+        console.error(error);
+
+        alert("Failed to sign out.");
 
     }
 

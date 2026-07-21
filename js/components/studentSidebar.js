@@ -5,58 +5,102 @@ export function loadStudentSidebar(activePage) {
     sidebar.innerHTML = `
 
         <div class="sidebar-header">
-            <h2>MENU</h2>
+
+            <h2>SIPMS</h2>
+
             <span>Student Portal</span>
+
         </div>
 
         <ul class="sidebar-menu">
 
             <li class="${activePage==="dashboard"?"active":""}"
                 onclick="location.href='dashboard.html'">
+
                 <i class="fa-solid fa-house"></i>
+
                 <span>Dashboard</span>
+
             </li>
 
             <li class="${activePage==="announcements"?"active":""}"
                 onclick="location.href='announcements.html'">
+
                 <i class="fa-solid fa-bullhorn"></i>
+
                 <span>Announcements</span>
+
             </li>
 
             <li class="${activePage==="guides"?"active":""}"
                 onclick="location.href='guides.html'">
+
                 <i class="fa-solid fa-book-open"></i>
+
                 <span>Safety Guides</span>
+
             </li>
 
             <li class="${activePage==="contacts"?"active":""}"
                 onclick="location.href='contacts.html'">
-                <i class="fa-solid fa-phone"></i>
-                <span>Emergency Contacts</span>
-            </li>
 
-            <li class="${activePage==="profile"?"active":""}"
-                onclick="location.href='profile.html'">
-                <i class="fa-solid fa-user"></i>
-                <span>Profile</span>
+                <i class="fa-solid fa-phone"></i>
+
+                <span>Emergency Contacts</span>
+
             </li>
 
             <li class="${activePage==="emergency"?"active":""}"
                 onclick="location.href='emergency.html'">
+
                 <i class="fa-solid fa-triangle-exclamation"></i>
-                <span>Emergency Alert</span>
+
+                <span>Emergency Alerts</span>
+
+            </li>
+
+            <li class="${activePage==="weather"?"active":""}"
+                onclick="location.href='weather.html'">
+
+                <i class="fa-solid fa-cloud-sun-rain"></i>
+
+                <span>Weather Advisories</span>
+
+            </li>
+
+            <li class="${activePage==="drills"?"active":""}"
+                onclick="location.href='drills.html'">
+
+                <i class="fa-solid fa-calendar-days"></i>
+
+                <span>Drill Schedule</span>
+
             </li>
 
             <li class="${activePage==="incidentReports"?"active":""}"
                 onclick="location.href='incidentReports.html'">
+
                 <i class="fa-solid fa-file-circle-exclamation"></i>
+
                 <span>Incident Reports</span>
+
+            </li>
+
+            <li class="${activePage==="profile"?"active":""}"
+                onclick="location.href='profile.html'">
+
+                <i class="fa-solid fa-user"></i>
+
+                <span>Profile</span>
+
             </li>
 
         </ul>
 
         <div class="sidebar-footer">
-            Version 2.0
+
+            SIPMS v2.0
+
         </div>
 
     `;
@@ -80,8 +124,11 @@ export function loadStudentSidebar(activePage) {
         if (window.innerWidth <= 768) {
 
             if (
+
                 !sidebar.contains(e.target) &&
+
                 !menuBtn.contains(e.target)
+
             ) {
 
                 sidebar.classList.remove("open");

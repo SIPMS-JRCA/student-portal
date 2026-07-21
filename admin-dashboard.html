@@ -5,40 +5,81 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-    <title>Admin Dashboard | Safety First</title>
+    <title>Admin Dashboard | JRCA</title>
 
     <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/dashboard.css">
+
+    <link rel="stylesheet" href="css/theme.css">
+
+    <link rel="stylesheet" href="css/dashboard-v2.css">
+
     <link rel="stylesheet" href="css/admin.css">
 
 </head>
 
 <body>
 
-<header class="topbar">
+<header class="topbar-v2">
 
-    <div class="logo">
+    <div class="topbar-left">
 
-        <img src="images/logo.png" class="logo-img">
+        <button id="menuBtn" class="icon-btn">
 
-        <span>Safety First</span>
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+        <div class="brand">
+
+            <img src="images/JRCA LOGO.jpg"
+                 class="brand-logo">
+
+            <div class="brand-text">
+
+                <h2 class="desktop-title">
+
+                    JESUS REIGNS CHRISTIAN ACADEMY
+
+                </h2>
+
+                <h2 class="mobile-title">
+
+                    JRCA
+
+                </h2>
+
+                <span class="desktop-subtitle">
+
+                    Safety Information & Preparedness Management System
+
+                </span>
+
+                <span class="mobile-subtitle">
+
+                    SIPMS
+
+                </span>
+
+            </div>
+
+        </div>
 
     </div>
 
-    <div class="user-area">
+    <div class="topbar-right">
 
-        <span id="adminName">Administrator</span>
+        <button id="notificationBell"
+                class="icon-btn">
 
-        <button id="logoutBtn">
+            <i class="fa-solid fa-bell"></i>
 
-            <i class="fa-solid fa-right-from-bracket"></i>
-
-            Sign Out
+            <span id="notificationCount">0</span>
 
         </button>
 
@@ -46,223 +87,244 @@
 
 </header>
 
-<div class="dashboard">
+<div id="notificationPanel"
+     class="notification-panel">
 
-<aside class="sidebar"></aside>
+    <h3>Notifications</h3>
 
-<main class="content">
+    <div id="notificationList">
 
-<section class="admin-hero">
-
-    <div>
-
-        <h1 id="welcomeTitle">
-
-            👋 Welcome, Administrator
-
-        </h1>
-
-        <p>
-
-            School Emergency & Safety Information System
-
-        </p>
+        No notifications.
 
     </div>
-
-    <div class="hero-date">
-
-        <i class="fa-solid fa-calendar-days"></i>
-
-        <span id="currentDate"></span>
-
-    </div>
-
-</section>
-
-<section class="stats-grid">
-
-    <div class="stat-card">
-
-        <i class="fa-solid fa-users"></i>
-
-        <h2 id="totalUsers">0</h2>
-
-        <span>Total Users</span>
-
-    </div>
-
-    <div class="stat-card">
-
-        <i class="fa-solid fa-user-graduate"></i>
-
-        <h2 id="totalStudents">0</h2>
-
-        <span>Students</span>
-
-    </div>
-
-    <div class="stat-card">
-
-        <i class="fa-solid fa-user-shield"></i>
-
-        <h2 id="totalAdmins">0</h2>
-
-        <span>Admins</span>
-
-    </div>
-
-    <div class="stat-card">
-
-        <i class="fa-solid fa-bullhorn"></i>
-
-        <h2 id="totalAnnouncements">0</h2>
-
-        <span>Announcements</span>
-
-    </div>
-
-    <div class="stat-card">
-
-        <i class="fa-solid fa-triangle-exclamation"></i>
-
-        <h2 id="totalReports">0</h2>
-
-        <span>Incident Reports</span>
-
-    </div>
-
-    <div class="stat-card">
-
-        <i class="fa-solid fa-bell"></i>
-
-        <h2 id="activeAlerts">0</h2>
-
-        <span>Emergency Alerts</span>
-
-    </div>
-
-</section>
-
-<section class="dashboard-grid">
-
-    <div class="card dashboard-card">
-
-        <h2>
-            📈 System Overview
-        </h2>
-
-        <div id="dashboardChart">
-
-            Charts coming soon...
-
-        </div>
-
-    </div>
-
-    <div class="card dashboard-card">
-
-        <h2>
-            📰 Recent Activity
-        </h2>
-
-        <div id="recentActivity">
-
-            Loading...
-
-        </div>
-
-    </div>
-
-</section>
-
-<section class="card">
-
-    <h2>
-        🟢 System Status
-    </h2>
-
-    <div class="status-grid">
-
-        <div class="status-item">
-            🟢 Firebase Connected
-        </div>
-
-        <div class="status-item">
-            🟢 Authentication Active
-        </div>
-
-        <div class="status-item">
-            🟢 Firestore Database
-        </div>
-
-        <div class="status-item">
-            🟢 Notification Service
-        </div>
-
-    </div>
-
-</section>
-
-<section class="card recent-activity">
-
-    <h2>
-
-        Recent Activity
-
-    </h2>
-
-    <div id="recentActivity">
-
-        Loading recent activity...
-
-    </div>
-
-</section>
-
-<section class="card system-status">
-
-    <h2>
-
-        System Status
-
-    </h2>
-
-    <div class="status-grid">
-
-        <div class="status-item">
-
-            🟢 Firebase Connected
-
-        </div>
-
-        <div class="status-item">
-
-            🟢 Authentication Active
-
-        </div>
-
-        <div class="status-item">
-
-            🟢 Notification Service
-
-        </div>
-
-        <div class="status-item">
-
-            🟢 Emergency System Ready
-
-        </div>
-
-    </div>
-
-</section>
-
-</main>
 
 </div>
 
-<script type="module" src="js/pages/admin-dashboard.js"></script>
+<div class="dashboard">
+
+    <aside class="sidebar"></aside>
+
+    <main class="content">
+
+        <!-- HERO -->
+
+        <section class="admin-hero">
+
+            <div>
+
+                <h1>
+
+                    👋 Welcome, Administrator
+
+                </h1>
+
+                <p>
+
+                    Safety Information & Preparedness Management System
+
+                </p>
+
+            </div>
+
+            <div class="hero-date">
+
+                <i class="fa-solid fa-calendar-days"></i>
+
+                <span id="currentDate">
+
+                    Loading...
+
+                </span>
+
+            </div>
+
+        </section>
+
+        <!-- STATISTICS -->
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+
+                <i class="fa-solid fa-users"></i>
+
+                <h2 id="totalUsers">0</h2>
+
+                <span>Total Users</span>
+
+            </div>
+
+            <div class="stat-card">
+
+                <i class="fa-solid fa-user-graduate"></i>
+
+                <h2 id="totalStudents">0</h2>
+
+                <span>Students</span>
+
+            </div>
+
+            <div class="stat-card">
+
+                <i class="fa-solid fa-user-shield"></i>
+
+                <h2 id="totalAdmins">0</h2>
+
+                <span>Administrators</span>
+
+            </div>
+
+            <div class="stat-card">
+
+                <i class="fa-solid fa-bullhorn"></i>
+
+                <h2 id="totalAnnouncements">0</h2>
+
+                <span>Announcements</span>
+
+            </div>
+
+            <div class="stat-card">
+
+                <i class="fa-solid fa-file-circle-exclamation"></i>
+
+                <h2 id="totalReports">0</h2>
+
+                <span>Incident Reports</span>
+
+            </div>
+
+            <div class="stat-card">
+
+                <i class="fa-solid fa-triangle-exclamation"></i>
+
+                <h2 id="activeAlerts">0</h2>
+
+                <span>Emergency Alerts</span>
+
+            </div>
+
+        </section>
+
+        <!-- MAIN GRID -->
+
+        <section class="dashboard-grid">
+
+            <div class="card dashboard-card">
+
+                <h2>
+
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+
+                    Recent Activity
+
+                </h2>
+
+                <br>
+
+                <div id="recentActivity">
+
+                    Loading recent activity...
+
+                 </div>
+
+            </div>
+
+            <div class="card dashboard-card">
+
+                <h2>
+
+                    <i class="fa-solid fa-server"></i>
+
+                    System Status
+
+                </h2>
+
+                <br>
+
+                <div class="status-grid">
+
+                    <div class="status-item">
+
+                        🟢 Firebase Connected
+
+                    </div>
+
+                    <div class="status-item">
+
+                        🟢 Authentication Online
+
+                    </div>
+
+                    <div class="status-item">
+
+                        🟢 Firestore Database
+
+                    </div>
+
+                    <div class="status-item">
+
+                        🟢 Notification Service
+
+                    </div>
+
+                    <div class="status-item">
+
+                        🟢 Emergency System Ready
+
+                    </div>
+
+                    <div class="status-item">
+
+                        🟢 Administrator Portal
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="card">
+
+            <h2>
+
+                <i class="fa-solid fa-chart-line"></i>
+
+                System Overview
+
+            </h2>
+
+            <br>
+
+            <p>
+
+                Welcome to the Safety Information & Preparedness Management System Administrator Dashboard.
+
+            </p>
+
+            <br>
+
+            <p>
+
+                From this dashboard you can manage announcements, emergency alerts, incident reports, weather advisories, evacuation information, drill schedules, user accounts, and administrator applications.
+
+            </p>
+
+            <br>
+
+            <p>
+
+                Use the navigation menu on the left to access every administrative module.
+
+            </p>
+
+        </section>
+
+    </main>
+
+</div>
 
 <script type="module">
 
@@ -272,6 +334,10 @@ from "./js/components/adminSidebar.js";
 loadAdminSidebar("dashboard");
 
 </script>
+
+<script type="module" src="js/pages/admin-dashboard.js"></script>
+
+<script type="module" src="js/components/notifications.js"></script>
 
 </body>
 

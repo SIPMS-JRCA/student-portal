@@ -1,0 +1,263 @@
+/* ==========================================
+   ADMIN SAFETY GUIDES
+========================================== */
+
+.page-header{
+
+    margin-bottom:30px;
+
+}
+
+.page-header h1{
+
+    color:#1E3A5F;
+
+    margin-bottom:8px;
+
+}
+
+.page-header p{
+
+    color:#64748B;
+
+}
+
+#postGuideBtn{
+
+    background:#2563EB;
+
+    color:white;
+
+    border:none;
+
+    padding:14px 22px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    transition:.25s;
+
+}
+
+#postGuideBtn:hover{
+
+    background:#1D4ED8;
+
+}
+
+#guideList{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+.guide-card{
+
+    background:white;
+
+    border-left:8px solid #2563EB;
+
+    border-radius:18px;
+
+    padding:24px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+    transition:.25s;
+
+}
+
+.guide-card:hover{
+
+    transform:translateY(-3px);
+
+}
+
+.guide-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+    margin-bottom:18px;
+
+}
+
+.guide-title{
+
+    font-size:22px;
+
+    font-weight:700;
+
+    color:#1E3A5F;
+
+}
+
+.guide-category{
+
+    background:#2563EB;
+
+    color:white;
+
+    padding:8px 16px;
+
+    border-radius:999px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+}
+
+.guide-content{
+
+    color:#475569;
+
+    line-height:1.8;
+
+    margin:18px 0;
+
+    white-space:pre-wrap;
+
+}
+
+.guide-footer{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+}
+
+.guide-date{
+
+    color:#64748B;
+
+    font-size:14px;
+
+}
+
+.guide-actions{
+
+    display:flex;
+
+    gap:12px;
+
+}
+
+.guide-actions button{
+
+    border:none;
+
+    color:white;
+
+    padding:10px 16px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.edit-guide{
+
+    background:#2563EB;
+
+}
+
+.edit-guide:hover{
+
+    background:#1D4ED8;
+
+}
+
+.delete-guide{
+
+    background:#DC2626;
+
+}
+
+.delete-guide:hover{
+
+    background:#B91C1C;
+
+}
+
+.empty-guides{
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:60px;
+
+    text-align:center;
+
+    color:#64748B;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+.empty-guides i{
+
+    font-size:70px;
+
+    color:#CBD5E1;
+
+    margin-bottom:20px;
+
+}
+
+@media(max-width:768px){
+
+.guide-header{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+}
+
+.guide-footer{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+}
+
+.guide-actions{
+
+    width:100%;
+
+}
+
+.guide-actions button{
+
+    flex:1;
+
+}
+
+}

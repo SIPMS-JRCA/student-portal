@@ -3,114 +3,292 @@ import { auth, db } from "../firebase.js";
 import { protectAdminPage } from "../components/adminGuard.js";
 
 import {
-    onAuthStateChanged,
-    signOut
+    onAuthStateChanged
 } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-auth.js";
 
 import {
     collection,
     getDocs,
     query,
-    where
+    where,
+    orderBy,
+    limit
 } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-firestore.js";
-
-// =========================
-// Elements
-// =========================
-
-const adminName = document.getElementById("adminName");
-const logoutBtn = document.getElementById("logoutBtn");
-
-const totalUsers = document.getElementById("totalUsers");
-const totalStudents = document.getElementById("totalStudents");
-const totalAdmins = document.getElementById("totalAdmins");
-const totalAnnouncements = document.getElementById("totalAnnouncements");
-const currentDate = document.getElementById("currentDate");
 
 protectAdminPage();
 
-// =========================
+// ======================================
+// Elements
+// ======================================
+
+const totalUsers =
+document.getElementById("totalUsers");
+
+const totalStudents =
+document.getElementById("totalStudents");
+
+const totalAdmins =
+document.getElementById("totalAdmins");
+
+const totalAnnouncements =
+document.getElementById("totalAnnouncements");
+
+const totalReports =
+document.getElementById("totalReports");
+
+const activeAlerts =
+document.getElementById("activeAlerts");
+
+const recentActivity =
+document.getElementById("recentActivity");
+
+const currentDate =
+document.getElementById("currentDate");
+
+// ======================================
 // Authentication
-// =========================
+// ======================================
 
-onAuthStateChanged(auth, async (user) => {
+onAuthStateChanged(auth, async(user)=>{
 
-    if (!user) {
+    if(!user){
 
-        window.location.href = "login.html";
+        location.href="login.html";
 
         return;
 
     }
 
-    adminName.textContent = user.email;
+    currentDate.textContent=
+    new Date().toLocaleDateString(
+        undefined,
+        {
+            weekday:"long",
+            year:"numeric",
+            month:"long",
+            day:"numeric"
+        }
+    );
 
-    currentDate.textContent =
-    new Date().toLocaleString(undefined,{
-        weekday:"long",
-        year:"numeric",
-        month:"long",
-        day:"numeric"
-    });
+    loadStatistics();
 
-    loadDashboard();
-
-});
-
-// =========================
-// Logout
-// =========================
-
-logoutBtn.addEventListener("click", async () => {
-
-    await signOut(auth);
-
-    window.location.href = "login.html";
+    loadRecentActivity();
 
 });
 
-// =========================
-// Dashboard Statistics
-// =========================
+// ======================================
+// Statistics
+// ======================================
 
-async function loadDashboard() {
+async function loadStatistics(){
 
-    // Total Users
-    const usersSnapshot =
-        await getDocs(collection(db, "users"));
+    // Users
 
-    totalUsers.textContent =
-        usersSnapshot.size;
+    const users=
+    await getDocs(
+        collection(db,"users")
+    );
+
+    totalUsers.textContent=
+    users.size;
 
     // Students
-    const studentQuery = query(
-        collection(db, "users"),
-        where("role", "==", "student")
+
+    const students=
+    await getDocs(
+
+        query(
+
+            collection(db,"users"),
+
+            where("role","==","student")
+
+        )
+
     );
 
-    const students =
-        await getDocs(studentQuery);
-
-    totalStudents.textContent =
-        students.size;
+    totalStudents.textContent=
+    students.size;
 
     // Admins
-    const adminQuery = query(
-        collection(db, "users"),
-        where("role", "==", "admin")
+
+    const admins=
+    await getDocs(
+
+        query(
+
+            collection(db,"users"),
+
+            where("role","==","admin")
+
+        )
+
     );
 
-    const admins =
-        await getDocs(adminQuery);
-
-    totalAdmins.textContent =
-        admins.size;
+    totalAdmins.textContent=
+    admins.size;
 
     // Announcements
-    const announcements =
-        await getDocs(collection(db, "announcements"));
 
-    totalAnnouncements.textContent =
-        announcements.size;
+    const announcements=
+    await getDocs(
+
+        collection(db,"announcements")
+
+    );
+
+    totalAnnouncements.textContent=
+    announcements.size;
+
+    // Incident Reports
+
+    try{
+
+        const reports=
+        await getDocs(
+
+            collection(db,"incidentReports")
+
+        );
+
+        totalReports.textContent=
+        reports.size;
+
+    }
+
+    catch{
+
+        totalReports.textContent="0";
+
+    }
+
+    // Emergency Alerts
+
+    try{
+
+        const alerts=
+        await getDocs(
+
+            query(
+
+                collection(db,"emergencyAlerts"),
+
+                where("status","==","active")
+
+            )
+
+        );
+
+        activeAlerts.textContent=
+        alerts.size;
+
+    }
+
+    catch{
+
+        activeAlerts.textContent="0";
+
+    }
+
+}
+
+// ======================================
+// Recent Activity
+// ======================================
+
+async function loadRecentActivity(){
+
+    try{
+
+        const snapshot=
+        await getDocs(
+
+            query(
+
+                collection(db,"announcements"),
+
+                orderBy("createdAt","desc"),
+
+                limit(5)
+
+            )
+
+        );
+
+        if(snapshot.empty){
+
+            recentActivity.innerHTML=`
+
+                <div class="activity-item">
+
+                    No recent activity.
+
+                </div>
+
+            `;
+
+            return;
+
+        }
+
+        recentActivity.innerHTML="";
+
+        snapshot.forEach(doc=>{
+
+            const item=doc.data();
+
+            const date=item.createdAt
+            ? item.createdAt.toDate().toLocaleString()
+            : "";
+
+            recentActivity.innerHTML+=`
+
+                <div class="activity-item">
+
+                    <strong>
+
+                        📢 ${item.title}
+
+                    </strong>
+
+                    <br><br>
+
+                    <small>
+
+                        ${item.postedBy}
+
+                    </small>
+
+                    <br>
+
+                    <small>
+
+                        ${date}
+
+                    </small>
+
+                </div>
+
+            `;
+
+        });
+
+    }
+
+    catch(error){
+
+        console.error(error);
+
+        recentActivity.innerHTML=`
+
+            <div class="activity-item">
+
+                Unable to load activity.
+
+            </div>
+
+        `;
+
+    }
 
 }

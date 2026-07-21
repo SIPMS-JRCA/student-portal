@@ -4,22 +4,18 @@
 <head>
 
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
-
-<title>Announcements | JRCA</title>
+<title>Emergency Alerts | Admin</title>
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
 <link rel="stylesheet" href="css/style.css">
-
 <link rel="stylesheet" href="css/theme.css">
-
 <link rel="stylesheet" href="css/dashboard-v2.css">
-
 <link rel="stylesheet" href="css/admin.css">
+<link rel="stylesheet" href="css/admin-emergency.css">
 
 </head>
 
@@ -30,40 +26,29 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 <div class="topbar-left">
 
 <button id="menuBtn" class="icon-btn">
-
 <i class="fa-solid fa-bars"></i>
-
 </button>
 
 <div class="brand">
 
-<img src="images/JRCA LOGO.jpg"
-class="brand-logo">
+<img src="images/JRCA LOGO.jpg" class="brand-logo">
 
 <div class="brand-text">
 
 <h2 class="desktop-title">
-
 JESUS REIGNS CHRISTIAN ACADEMY
-
 </h2>
 
 <h2 class="mobile-title">
-
 JRCA
-
 </h2>
 
 <span class="desktop-subtitle">
-
-Safety Information & Preparedness Management System
-
+Safety Information and Preparedness Management System
 </span>
 
 <span class="mobile-subtitle">
-
-SIPMS
-
+SESIS
 </span>
 
 </div>
@@ -96,67 +81,79 @@ SIPMS
 
 <h1>
 
-📢 Announcements
+Emergency Alerts
 
 </h1>
 
 <p>
 
-Create, publish and manage announcements for students and staff.
+Create and manage emergency alerts for all students.
 
 </p>
 
 </section>
 
-<section class="dashboard-grid">
-
 <div class="card">
 
 <h2>
 
-<i class="fa-solid fa-pen"></i>
+<i class="fa-solid fa-triangle-exclamation"></i>
 
-Create Announcement
+Create Emergency Alert
 
 </h2>
 
 <br>
 
 <input
-id="title"
+id="alertTitle"
 type="text"
-placeholder="Announcement Title">
+placeholder="Alert title">
 
 <br><br>
 
 <textarea
-id="message"
-rows="8"
-placeholder="Write your announcement..."></textarea>
+id="alertMessage"
+rows="6"
+placeholder="Write the emergency alert..."></textarea>
 
 <br><br>
 
-<select id="priority">
+<select id="alertLevel">
 
-<option>General</option>
+<option value="Emergency">
 
-<option>Important</option>
+🚨 Emergency
 
-<option>Emergency</option>
+</option>
+
+<option value="Warning">
+
+⚠ Warning
+
+</option>
+
+<option value="Advisory">
+
+ℹ Advisory
+
+</option>
 
 </select>
 
 <br><br>
 
-<button id="postBtn" class="primary-btn">
+<button id="sendAlertBtn">
 
 <i class="fa-solid fa-paper-plane"></i>
 
-Post Announcement
+Send Alert
 
 </button>
 
 </div>
+
+<br>
 
 <div class="card">
 
@@ -164,21 +161,19 @@ Post Announcement
 
 <i class="fa-solid fa-clock-rotate-left"></i>
 
-Recent Announcements
+Recent Emergency Alerts
 
 </h2>
 
 <br>
 
-<div id="recentAnnouncements">
+<div id="alertList">
 
-Loading announcements...
-
-</div>
+Loading...
 
 </div>
 
-</section>
+</div>
 
 </main>
 
@@ -189,11 +184,15 @@ Loading announcements...
 import { loadAdminSidebar }
 from "./js/components/adminSidebar.js";
 
-loadAdminSidebar("announcements");
+loadAdminSidebar("emergency");
 
 </script>
 
-<script type="module" src="js/pages/admin.js"></script>
+<script
+type="module"
+src="js/pages/admin-emergency.js">
+
+</script>
 
 </body>
 

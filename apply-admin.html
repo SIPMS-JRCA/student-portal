@@ -18,25 +18,65 @@
 
 <body>
 
-<header class="topbar">
+<header class="topbar-v2">
 
-    <div class="logo">
+    <div class="topbar-left">
 
-        <img src="images/logo.png" alt="Logo">
+        <button id="menuBtn" class="icon-btn">
 
-        <span>Safety First</span>
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+        <div class="brand">
+
+            <img src="images/JRCA LOGO.jpg" class="brand-logo">
+
+            <div class="brand-text">
+
+                <h2 class="desktop-title">
+
+                    JESUS REIGNS CHRISTIAN ACADEMY
+
+                </h2>
+
+                <h2 class="mobile-title">
+
+                    JRCA
+
+                </h2>
+
+                <span class="desktop-subtitle">
+
+                    Safety Information & Preparedness Management System
+
+                </span>
+
+                <span class="mobile-subtitle">
+
+                    SIPMS
+
+                </span>
+
+            </div>
+
+        </div>
 
     </div>
 
     <div class="topbar-right">
 
-        <button
-            class="logout-btn"
-            onclick="window.location.href='dashboard.html'">
+        <button id="notificationBell" class="icon-btn">
 
-            <i class="fa-solid fa-arrow-left"></i>
+            <i class="fa-solid fa-bell"></i>
 
-            Back
+            <span id="notificationCount">0</span>
+
+        </button>
+
+        <button id="logoutBtn" class="icon-btn">
+
+            <i class="fa-solid fa-right-from-bracket"></i>
 
         </button>
 

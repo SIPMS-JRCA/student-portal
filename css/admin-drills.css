@@ -1,0 +1,267 @@
+/* ==========================================
+   ADMIN DRILL SCHEDULE
+========================================== */
+
+.page-header{
+
+    margin-bottom:30px;
+
+}
+
+.page-header h1{
+
+    color:#1E3A5F;
+
+    margin-bottom:8px;
+
+}
+
+.page-header p{
+
+    color:#64748B;
+
+}
+
+#postDrillBtn{
+
+    background:#2563EB;
+
+    color:white;
+
+    border:none;
+
+    padding:14px 22px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    transition:.25s;
+
+}
+
+#postDrillBtn:hover{
+
+    background:#1D4ED8;
+
+}
+
+#drillList{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+.drill-card{
+
+    background:white;
+
+    border-left:8px solid #2563EB;
+
+    border-radius:18px;
+
+    padding:24px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+    transition:.25s;
+
+}
+
+.drill-card:hover{
+
+    transform:translateY(-3px);
+
+}
+
+.drill-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+    margin-bottom:18px;
+
+}
+
+.drill-title{
+
+    font-size:22px;
+
+    font-weight:700;
+
+    color:#1E3A5F;
+
+}
+
+.drill-type{
+
+    background:#2563EB;
+
+    color:white;
+
+    padding:8px 16px;
+
+    border-radius:999px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+}
+
+.drill-info{
+
+    margin:18px 0;
+
+    color:#475569;
+
+    line-height:1.8;
+
+}
+
+.drill-info div{
+
+    margin-bottom:8px;
+
+}
+
+.drill-footer{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+}
+
+.drill-date{
+
+    color:#64748B;
+
+    font-size:14px;
+
+}
+
+.drill-actions{
+
+    display:flex;
+
+    gap:12px;
+
+}
+
+.drill-actions button{
+
+    border:none;
+
+    color:white;
+
+    padding:10px 16px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.edit-drill{
+
+    background:#2563EB;
+
+}
+
+.edit-drill:hover{
+
+    background:#1D4ED8;
+
+}
+
+.delete-drill{
+
+    background:#DC2626;
+
+}
+
+.delete-drill:hover{
+
+    background:#B91C1C;
+
+}
+
+.empty-drills{
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:60px;
+
+    text-align:center;
+
+    color:#64748B;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+.empty-drills i{
+
+    font-size:70px;
+
+    color:#CBD5E1;
+
+    margin-bottom:20px;
+
+}
+
+@media(max-width:768px){
+
+.drill-header{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+}
+
+.drill-footer{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+}
+
+.drill-actions{
+
+    width:100%;
+
+}
+
+.drill-actions button{
+
+    flex:1;
+
+}
+
+}

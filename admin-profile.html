@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Admin Profile | JRCA</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/theme.css">
+<link rel="stylesheet" href="css/dashboard-v2.css">
+<link rel="stylesheet" href="css/admin.css">
+<link rel="stylesheet" href="css/admin-profile.css">
+
+</head>
+
+<body>
+
+<header class="topbar-v2">
+
+<div class="topbar-left">
+
+<button id="menuBtn" class="icon-btn">
+
+<i class="fa-solid fa-bars"></i>
+
+</button>
+
+<div class="brand">
+
+<img src="images/JRCA LOGO.jpg" class="brand-logo">
+
+<div class="brand-text">
+
+<h2 class="desktop-title">
+
+JESUS REIGNS CHRISTIAN ACADEMY
+
+</h2>
+
+<h2 class="mobile-title">
+
+JRCA
+
+</h2>
+
+<span class="desktop-subtitle">
+
+Safety Information & Preparedness Management System
+
+</span>
+
+<span class="mobile-subtitle">
+
+SIPMS
+
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="topbar-right">
+
+<button id="notificationBell" class="icon-btn">
+
+<i class="fa-solid fa-bell"></i>
+
+<span id="notificationCount">0</span>
+
+</button>
+
+</div>
+
+</header>
+
+<div class="dashboard">
+
+<aside class="sidebar"></aside>
+
+<main class="content">
+
+<section class="page-header">
+
+<h1>
+
+Administrator Profile
+
+</h1>
+
+<p>
+
+Manage your administrator account information.
+
+</p>
+
+</section>
+
+<div class="profile-layout">
+
+<!-- LEFT -->
+
+<section class="profile-card profile-side-card">
+
+<div class="profile-header">
+
+<img
+id="profileImage"
+src="images/default-profile.png"
+class="profile-image"
+alt="Profile">
+
+<h2 id="profileName">
+
+Administrator
+
+</h2>
+
+<p id="profileRole">
+
+System Administrator
+
+</p>
+
+<button
+id="changePhotoBtn"
+class="secondary-btn">
+
+<i class="fa-solid fa-camera"></i>
+
+Change Photo
+
+</button>
+
+</div>
+
+</section>
+
+<!-- RIGHT -->
+
+<section class="profile-card">
+
+<h2 class="profile-section-title">
+
+Account Overview
+
+</h2>
+
+<div class="profile-info-grid">
+
+<div class="info-box">
+
+<div class="info-icon">
+
+<i class="fa-solid fa-user"></i>
+
+</div>
+
+<div class="info-content">
+
+<small>Username</small>
+
+<strong id="overviewUsername">
+
+Loading...
+
+</strong>
+
+</div>
+
+</div>
+
+<div class="info-box">
+
+<div class="info-icon">
+
+<i class="fa-solid fa-envelope"></i>
+
+</div>
+
+<div class="info-content">
+
+<small>Email Address</small>
+
+<strong id="overviewEmail">
+
+Loading...
+
+</strong>
+
+</div>
+
+</div>
+
+<div class="info-box">
+
+<div class="info-icon">
+
+<i class="fa-solid fa-user-shield"></i>
+
+</div>
+
+<div class="info-content">
+
+<small>Role</small>
+
+<strong id="overviewRole">
+
+Administrator
+
+</strong>
+
+</div>
+
+</div>
+
+<div class="info-box">
+
+<div class="info-icon">
+
+<i class="fa-solid fa-circle-check"></i>
+
+</div>
+
+<div class="info-content">
+
+<small>Status</small>
+
+<strong class="status-active">
+
+Active
+
+</strong>
+
+</div>
+
+</div>
+
+</div>
+
+<h2 class="profile-section-title">
+
+Edit Information
+
+</h2>
+
+<form class="profile-form">
+
+<div class="form-row">
+
+<div class="form-group">
+
+<label>
+
+<i class="fa-solid fa-user"></i>
+
+Username
+
+</label>
+
+<input
+type="text"
+id="username">
+
+</div>
+
+<div class="form-group">
+
+<label>
+
+<i class="fa-solid fa-envelope"></i>
+
+Email
+
+</label>
+
+<input
+type="email"
+id="email"
+readonly>
+
+</div>
+
+</div>
+
+<div class="form-row">
+
+<div class="form-group">
+
+<label>
+
+<i class="fa-solid fa-user-shield"></i>
+
+Role
+
+</label>
+
+<input
+type="text"
+id="role"
+readonly>
+
+</div>
+
+</div>
+
+<div class="form-group">
+
+<label>
+
+<i class="fa-solid fa-address-card"></i>
+
+Bio
+
+</label>
+
+<textarea
+id="bio"
+rows="5"
+placeholder="Write something about yourself..."></textarea>
+
+</div>
+
+<div class="button-group">
+
+<button
+type="button"
+id="saveProfile"
+class="primary-btn">
+
+<i class="fa-solid fa-floppy-disk"></i>
+
+Save Changes
+
+</button>
+
+<button
+type="button"
+id="changePassword"
+class="secondary-btn">
+
+<i class="fa-solid fa-key"></i>
+
+Change Password
+
+</button>
+
+<button
+type="button"
+id="logoutBtn"
+class="logout-btn">
+
+<i class="fa-solid fa-right-from-bracket"></i>
+
+Sign Out
+
+</button>
+
+</div>
+
+</form>
+
+</section>
+
+</div>
+
+</main>
+
+</div>
+
+<!-- PASSWORD MODAL -->
+
+<div id="passwordModal" class="modal">
+
+<div class="modal-content">
+
+<h2>
+
+<i class="fa-solid fa-key"></i>
+
+Change Password
+
+</h2>
+
+<input
+type="password"
+id="newPassword"
+placeholder="New Password">
+
+<input
+type="password"
+id="confirmPassword"
+placeholder="Confirm Password">
+
+<div class="modal-buttons">
+
+<button
+id="cancelPassword"
+class="secondary-btn">
+
+Cancel
+
+</button>
+
+<button
+id="confirmPasswordBtn"
+class="primary-btn">
+
+Update Password
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<script type="module">
+
+import { loadAdminSidebar }
+from "./js/components/adminSidebar.js";
+
+loadAdminSidebar("profile");
+
+</script>
+
+<script type="module"
+src="js/pages/admin-profile.js"></script>
+
+</body>
+
+</html>

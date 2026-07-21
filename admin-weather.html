@@ -4,22 +4,18 @@
 <head>
 
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
-
-<title>Announcements | JRCA</title>
+<title>Weather Advisories | SIPMS</title>
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
 <link rel="stylesheet" href="css/style.css">
-
 <link rel="stylesheet" href="css/theme.css">
-
 <link rel="stylesheet" href="css/dashboard-v2.css">
-
 <link rel="stylesheet" href="css/admin.css">
+<link rel="stylesheet" href="css/admin-weather.css">
 
 </head>
 
@@ -30,15 +26,12 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 <div class="topbar-left">
 
 <button id="menuBtn" class="icon-btn">
-
 <i class="fa-solid fa-bars"></i>
-
 </button>
 
 <div class="brand">
 
-<img src="images/JRCA LOGO.jpg"
-class="brand-logo">
+<img src="images/JRCA LOGO.jpg" class="brand-logo">
 
 <div class="brand-text">
 
@@ -56,7 +49,7 @@ JRCA
 
 <span class="desktop-subtitle">
 
-Safety Information & Preparedness Management System
+Safety Information and Preparedness Management System
 
 </span>
 
@@ -96,67 +89,91 @@ SIPMS
 
 <h1>
 
-📢 Announcements
+Weather Advisories
 
 </h1>
 
 <p>
 
-Create, publish and manage announcements for students and staff.
+Create and manage weather advisories for the school community.
 
 </p>
 
 </section>
 
-<section class="dashboard-grid">
-
 <div class="card">
 
 <h2>
 
-<i class="fa-solid fa-pen"></i>
+<i class="fa-solid fa-cloud-sun-rain"></i>
 
-Create Announcement
+Create Weather Advisory
 
 </h2>
 
 <br>
 
 <input
-id="title"
+id="weatherTitle"
 type="text"
-placeholder="Announcement Title">
+placeholder="Weather advisory title">
 
 <br><br>
 
 <textarea
-id="message"
-rows="8"
-placeholder="Write your announcement..."></textarea>
+id="weatherMessage"
+rows="6"
+placeholder="Enter weather advisory..."></textarea>
 
 <br><br>
 
-<select id="priority">
+<select id="weatherLevel">
 
-<option>General</option>
+<option value="Information">
 
-<option>Important</option>
+Information
 
-<option>Emergency</option>
+</option>
+
+<option value="Heavy Rain">
+
+Heavy Rain
+
+</option>
+
+<option value="Typhoon">
+
+Typhoon
+
+</option>
+
+<option value="Flood">
+
+Flood
+
+</option>
+
+<option value="Extreme Heat">
+
+Extreme Heat
+
+</option>
 
 </select>
 
 <br><br>
 
-<button id="postBtn" class="primary-btn">
+<button id="postWeatherBtn">
 
 <i class="fa-solid fa-paper-plane"></i>
 
-Post Announcement
+Post Advisory
 
 </button>
 
 </div>
+
+<br>
 
 <div class="card">
 
@@ -164,21 +181,19 @@ Post Announcement
 
 <i class="fa-solid fa-clock-rotate-left"></i>
 
-Recent Announcements
+Recent Advisories
 
 </h2>
 
 <br>
 
-<div id="recentAnnouncements">
+<div id="weatherList">
 
-Loading announcements...
-
-</div>
+Loading...
 
 </div>
 
-</section>
+</div>
 
 </main>
 
@@ -189,11 +204,14 @@ Loading announcements...
 import { loadAdminSidebar }
 from "./js/components/adminSidebar.js";
 
-loadAdminSidebar("announcements");
+loadAdminSidebar("weather");
 
 </script>
 
-<script type="module" src="js/pages/admin.js"></script>
+<script type="module"
+src="js/pages/admin-weather.js">
+
+</script>
 
 </body>
 

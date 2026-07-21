@@ -1,0 +1,355 @@
+/* ==========================================================
+   ADMIN INCIDENT REPORTS
+========================================================== */
+
+.toolbar{
+
+    display:flex;
+
+    gap:20px;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+}
+
+.toolbar input{
+
+    flex:1;
+
+    min-width:280px;
+
+}
+
+.toolbar select{
+
+    width:220px;
+
+}
+
+#reportsContainer{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:25px;
+
+}
+
+.report-card{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:25px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:.25s;
+
+}
+
+.report-card:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 15px 30px rgba(0,0,0,.12);
+
+}
+
+.report-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:20px;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+}
+
+.report-title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.report-title i{
+
+    font-size:30px;
+
+    color:#2563EB;
+
+}
+
+.report-title h3{
+
+    color:#1E3A5F;
+
+    margin:0;
+
+}
+
+.status{
+
+    display:inline-block;
+
+    padding:8px 16px;
+
+    border-radius:999px;
+
+    color:white;
+
+    font-size:13px;
+
+    font-weight:700;
+
+}
+
+.status.Pending{
+
+    background:#F59E0B;
+
+}
+
+.status.Investigating{
+
+    background:#2563EB;
+
+}
+
+.status.Resolved{
+
+    background:#16A34A;
+
+}
+
+.report-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:18px;
+
+    margin-top:20px;
+
+    margin-bottom:20px;
+
+}
+
+.report-info{
+
+    background:#F8FAFC;
+
+    border-radius:14px;
+
+    padding:16px;
+
+}
+
+.report-info small{
+
+    display:block;
+
+    color:#64748B;
+
+    margin-bottom:6px;
+
+}
+
+.report-info strong{
+
+    color:#1E3A5F;
+
+}
+
+.report-description{
+
+    background:#F8FAFC;
+
+    border-radius:14px;
+
+    padding:20px;
+
+    margin-bottom:20px;
+
+    line-height:1.7;
+
+}
+
+.report-image{
+
+    width:100%;
+
+    max-height:300px;
+
+    object-fit:cover;
+
+    border-radius:15px;
+
+    margin-top:15px;
+
+    border:1px solid #E5E7EB;
+
+}
+
+.action-bar{
+
+    display:flex;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+    margin-top:20px;
+
+}
+
+.action-bar button{
+
+    border:none;
+
+    padding:12px 18px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    color:white;
+
+    transition:.25s;
+
+    font-size:14px;
+
+}
+
+.view-btn{
+
+    background:#2563EB;
+
+}
+
+.view-btn:hover{
+
+    background:#1D4ED8;
+
+}
+
+.pending-btn{
+
+    background:#F59E0B;
+
+}
+
+.pending-btn:hover{
+
+    background:#D97706;
+
+}
+
+.resolve-btn{
+
+    background:#16A34A;
+
+}
+
+.resolve-btn:hover{
+
+    background:#15803D;
+
+}
+
+.delete-btn{
+
+    background:#DC2626;
+
+}
+
+.delete-btn:hover{
+
+    background:#B91C1C;
+
+}
+
+.loading{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:50px;
+
+    text-align:center;
+
+    color:#64748B;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.empty{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:50px;
+
+    text-align:center;
+
+    color:#64748B;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+@media(max-width:768px){
+
+.report-header{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+}
+
+.toolbar{
+
+    flex-direction:column;
+
+}
+
+.toolbar input,
+
+.toolbar select{
+
+    width:100%;
+
+}
+
+.action-bar{
+
+    flex-direction:column;
+
+}
+
+.action-bar button{
+
+    width:100%;
+
+}
+
+}

@@ -8,18 +8,16 @@
 <meta name="viewport"
 content="width=device-width, initial-scale=1.0">
 
-<title>Announcements | JRCA</title>
+<title>Incident Reports | Admin</title>
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
 <link rel="stylesheet" href="css/style.css">
-
 <link rel="stylesheet" href="css/theme.css">
-
 <link rel="stylesheet" href="css/dashboard-v2.css">
-
 <link rel="stylesheet" href="css/admin.css">
+<link rel="stylesheet" href="css/admin-incidents.css">
 
 </head>
 
@@ -37,7 +35,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 
 <div class="brand">
 
-<img src="images/JRCA LOGO.jpg"
+<img
+src="images/JRCA LOGO.jpg"
 class="brand-logo">
 
 <div class="brand-text">
@@ -56,13 +55,13 @@ JRCA
 
 <span class="desktop-subtitle">
 
-Safety Information & Preparedness Management System
+Safety Information and Preparedness Management System
 
 </span>
 
 <span class="mobile-subtitle">
 
-SIPMS
+SESIS
 
 </span>
 
@@ -74,11 +73,16 @@ SIPMS
 
 <div class="topbar-right">
 
-<button id="notificationBell" class="icon-btn">
+<button id="notificationBell"
+class="icon-btn">
 
 <i class="fa-solid fa-bell"></i>
 
-<span id="notificationCount">0</span>
+<span id="notificationCount">
+
+0
+
+</span>
 
 </button>
 
@@ -96,89 +100,70 @@ SIPMS
 
 <h1>
 
-📢 Announcements
+Incident Reports
 
 </h1>
 
 <p>
 
-Create, publish and manage announcements for students and staff.
+Review, manage and resolve student incident reports.
 
 </p>
 
 </section>
 
-<section class="dashboard-grid">
-
 <div class="card">
 
-<h2>
-
-<i class="fa-solid fa-pen"></i>
-
-Create Announcement
-
-</h2>
-
-<br>
+<div class="toolbar">
 
 <input
-id="title"
 type="text"
-placeholder="Announcement Title">
+id="searchReport"
+placeholder="Search by student, incident or location...">
 
-<br><br>
+<select id="statusFilter">
 
-<textarea
-id="message"
-rows="8"
-placeholder="Write your announcement..."></textarea>
+<option value="All">
 
-<br><br>
+All Reports
 
-<select id="priority">
+</option>
 
-<option>General</option>
+<option value="Pending">
 
-<option>Important</option>
+Pending
 
-<option>Emergency</option>
+</option>
+
+<option value="Investigating">
+
+Investigating
+
+</option>
+
+<option value="Resolved">
+
+Resolved
+
+</option>
 
 </select>
 
-<br><br>
-
-<button id="postBtn" class="primary-btn">
-
-<i class="fa-solid fa-paper-plane"></i>
-
-Post Announcement
-
-</button>
-
 </div>
 
-<div class="card">
-
-<h2>
-
-<i class="fa-solid fa-clock-rotate-left"></i>
-
-Recent Announcements
-
-</h2>
+</div>
 
 <br>
 
-<div id="recentAnnouncements">
+<div id="reportsContainer">
 
-Loading announcements...
+<div class="loading">
+
+Loading incident reports...
 
 </div>
 
 </div>
-
-</section>
 
 </main>
 
@@ -189,11 +174,15 @@ Loading announcements...
 import { loadAdminSidebar }
 from "./js/components/adminSidebar.js";
 
-loadAdminSidebar("announcements");
+loadAdminSidebar("incidents");
 
 </script>
 
-<script type="module" src="js/pages/admin.js"></script>
+<script
+type="module"
+src="js/pages/admin-incidents.js">
+
+</script>
 
 </body>
 

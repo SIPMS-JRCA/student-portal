@@ -1,6 +1,11 @@
-/* ===========================
-   Admin Page
-=========================== */
+/* ==========================================================
+   JRCA ADMIN PANEL
+   Safety Information & Preparedness Management System
+========================================================== */
+
+/* ==========================================================
+   PAGE
+========================================================== */
 
 .content{
 
@@ -8,25 +13,285 @@
 
 }
 
+/* ==========================================================
+   HERO
+========================================================== */
+
+.admin-hero{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:35px;
+
+    margin-bottom:35px;
+
+    border-radius:24px;
+
+    color:white;
+
+    background:
+    linear-gradient(
+        135deg,
+        #1E3A5F,
+        #2563EB
+    );
+
+    box-shadow:
+    0 18px 40px
+    rgba(37,99,235,.25);
+
+}
+
+.admin-hero h1{
+
+    font-size:36px;
+
+    font-weight:700;
+
+    margin-bottom:8px;
+
+}
+
+.admin-hero p{
+
+    opacity:.9;
+
+    font-size:17px;
+
+}
+
+.hero-date{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    font-size:17px;
+
+    font-weight:600;
+
+}
+
+/* ==========================================================
+   STATS
+========================================================== */
+
+.stats-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+    gap:25px;
+
+    margin-bottom:35px;
+
+}
+
+.stat-card{
+
+    background:white;
+
+    border-radius:22px;
+
+    padding:30px;
+
+    text-align:center;
+
+    transition:.25s;
+
+    box-shadow:
+    0 10px 25px
+    rgba(0,0,0,.08);
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-7px);
+
+    box-shadow:
+    0 20px 35px
+    rgba(0,0,0,.12);
+
+}
+
+.stat-card i{
+
+    font-size:42px;
+
+    color:#2563EB;
+
+    margin-bottom:18px;
+
+}
+
+.stat-card h2{
+
+    color:#1E3A5F;
+
+    font-size:38px;
+
+    margin-bottom:8px;
+
+}
+
+.stat-card span{
+
+    color:#64748B;
+
+    font-size:15px;
+
+}
+
+/* ==========================================================
+   MAIN GRID
+========================================================== */
+
+.dashboard-grid{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    gap:25px;
+
+    margin-bottom:35px;
+
+}
+
+.dashboard-card{
+
+    min-height:340px;
+
+}
+
+/* ==========================================================
+   SHARED CARD
+========================================================== */
+
 .card{
 
     background:white;
 
-    border-radius:18px;
+    border-radius:22px;
 
     padding:30px;
 
-    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    box-shadow:
+    0 10px 25px
+    rgba(0,0,0,.08);
 
 }
 
 .card h2{
 
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
     color:#1E3A5F;
 
-    margin-bottom:10px;
+    font-size:24px;
 
 }
+
+.card h2 i{
+
+    color:#2563EB;
+
+}
+
+/* ==========================================================
+   RECENT ACTIVITY
+========================================================== */
+
+#recentActivity{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+.activity-item{
+
+    padding:18px;
+
+    border-left:6px solid #2563EB;
+
+    border-radius:14px;
+
+    background:#F8FAFC;
+
+}
+
+.activity-item strong{
+
+    color:#1E3A5F;
+
+}
+
+.activity-item small{
+
+    color:#64748B;
+
+}
+
+/* ==========================================================
+   SYSTEM STATUS
+========================================================== */
+
+.status-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:18px;
+
+}
+
+.status-item{
+
+    background:#F8FAFC;
+
+    border:1px solid #E5E7EB;
+
+    border-radius:14px;
+
+    padding:18px;
+
+    font-weight:600;
+
+    color:#1E3A5F;
+
+    transition:.25s;
+
+}
+
+.status-item:hover{
+
+    background:#EFF6FF;
+
+    transform:translateY(-3px);
+
+}
+
+/* ==========================================================
+   FORMS
+========================================================== */
 
 input,
 textarea,
@@ -34,17 +299,19 @@ select{
 
     width:100%;
 
-    padding:14px;
+    padding:14px 16px;
 
-    border:1px solid #d1d5db;
+    border:1px solid #D1D5DB;
 
-    border-radius:10px;
+    border-radius:12px;
 
     font-size:15px;
 
-    box-sizing:border-box;
+    background:white;
 
-    transition:.3s;
+    transition:.25s;
+
+    box-sizing:border-box;
 
 }
 
@@ -56,7 +323,7 @@ select:focus{
 
     border-color:#2563EB;
 
-    box-shadow:0 0 0 3px rgba(37,99,235,.15);
+    box-shadow:0 0 0 4px rgba(37,99,235,.15);
 
 }
 
@@ -64,91 +331,38 @@ textarea{
 
     resize:vertical;
 
+    min-height:130px;
+
 }
 
+/* ==========================================================
+   BUTTONS
+========================================================== */
+
+.primary-btn,
+.secondary-btn,
+.editBtn,
+.deleteBtn,
 #postBtn{
 
-    background:#2563EB;
-
-    color:white;
-
     border:none;
-
-    padding:14px 22px;
-
-    border-radius:10px;
-
-    cursor:pointer;
-
-    font-size:16px;
-
-    transition:.3s;
-
-}
-
-#postBtn:hover{
-
-    background:#1D4ED8;
-
-}
-
-.announcement-item{
-
-    padding:18px;
-
-    border:1px solid #e5e7eb;
 
     border-radius:12px;
 
-    margin-bottom:15px;
-
-    transition:.3s;
-
-}
-
-.announcement-item:hover{
-
-    background:#f8fafc;
-
-}
-
-.priority{
-
-    display:inline-block;
-
-    color:white;
-
-    padding:5px 12px;
-
-    border-radius:50px;
-
-    font-size:12px;
-
-    font-weight:600;
-
-    margin-bottom:10px;
-
-}
-
-.editBtn,
-.deleteBtn{
-
-    border:none;
-
-    padding:10px 16px;
-
-    border-radius:8px;
+    padding:13px 22px;
 
     cursor:pointer;
 
-    margin-right:10px;
+    font-size:15px;
 
-    font-size:14px;
+    font-weight:600;
 
-    transition:.3s;
+    transition:.25s;
 
 }
 
+.primary-btn,
+#postBtn,
 .editBtn{
 
     background:#2563EB;
@@ -157,9 +371,27 @@ textarea{
 
 }
 
+.primary-btn:hover,
+#postBtn:hover,
 .editBtn:hover{
 
     background:#1D4ED8;
+
+    transform:translateY(-2px);
+
+}
+
+.secondary-btn{
+
+    background:#E5E7EB;
+
+    color:#1E3A5F;
+
+}
+
+.secondary-btn:hover{
+
+    background:#CBD5E1;
 
 }
 
@@ -177,175 +409,203 @@ textarea{
 
 }
 
-/* ==========================================
-   ADMIN HERO
-========================================== */
+/* ==========================================================
+   ANNOUNCEMENT CARD
+========================================================== */
 
-.admin-hero{
-
-    background:linear-gradient(135deg,#1E3A5F,#2563EB);
-
-    color:white;
-
-    border-radius:22px;
-
-    padding:35px;
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    margin-bottom:35px;
-
-    box-shadow:0 15px 35px rgba(37,99,235,.25);
-
-}
-
-.admin-hero h1{
-
-    font-size:34px;
-
-    margin-bottom:8px;
-
-}
-
-.admin-hero p{
-
-    opacity:.9;
-
-}
-
-.hero-date{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:12px;
-
-    font-size:17px;
-
-}
-
-/* ==========================================
-   STATS
-========================================== */
-
-.stats-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-
-    gap:25px;
-
-    margin-bottom:35px;
-
-}
-
-.stat-card{
+.announcement-item{
 
     background:white;
 
-    border-radius:20px;
+    border-radius:18px;
 
-    padding:28px;
+    padding:24px;
 
-    text-align:center;
+    margin-bottom:20px;
 
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    box-shadow:0 8px 18px rgba(0,0,0,.08);
 
     transition:.25s;
 
 }
 
-.stat-card:hover{
+.announcement-item:hover{
 
-    transform:translateY(-6px);
-
-}
-
-.stat-card i{
-
-    font-size:38px;
-
-    color:#2563EB;
-
-    margin-bottom:18px;
+    transform:translateY(-5px);
 
 }
 
-.stat-card h2{
+.priority{
 
-    font-size:34px;
+    display:inline-block;
+
+    color:white;
+
+    padding:6px 14px;
+
+    border-radius:40px;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    margin-bottom:15px;
+
+}
+
+.announcement-item h3{
 
     color:#1E3A5F;
 
+    margin-bottom:12px;
+
 }
 
-.stat-card span{
+.announcement-item p{
+
+    color:#475569;
+
+    line-height:1.7;
+
+}
+
+.announcement-item small{
 
     color:#64748B;
 
 }
 
-/* ==========================================
-   QUICK ACTIONS
-========================================== */
+/* ==========================================================
+   TABLES
+========================================================== */
 
-.quick-actions{
+.table-container{
 
-    margin-bottom:35px;
+    overflow-x:auto;
 
 }
 
-.quick-actions h2{
+table{
 
-    margin-bottom:20px;
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+th{
+
+    background:#F8FAFC;
 
     color:#1E3A5F;
 
-}
+    text-align:left;
 
-.action-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-
-    gap:22px;
+    padding:16px;
 
 }
 
-.action-card{
+td{
+
+    padding:16px;
+
+    border-top:1px solid #E5E7EB;
+
+}
+
+tr:hover{
+
+    background:#F8FAFC;
+
+}
+
+/* ==========================================================
+   INFO CARDS
+========================================================== */
+
+.info-card{
 
     background:white;
 
-    border-radius:20px;
+    border-radius:18px;
 
-    padding:28px;
+    padding:24px;
 
-    cursor:pointer;
-
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    box-shadow:0 8px 18px rgba(0,0,0,.08);
 
     transition:.25s;
 
 }
 
-.action-card:hover{
+.info-card:hover{
 
-    transform:translateY(-8px);
-
-    box-shadow:0 18px 35px rgba(0,0,0,.12);
+    transform:translateY(-5px);
 
 }
 
-.action-card i{
+/* ==========================================================
+   BADGES
+========================================================== */
 
-    font-size:40px;
+.badge{
+
+    display:inline-block;
+
+    padding:6px 12px;
+
+    border-radius:999px;
+
+    font-size:12px;
+
+    font-weight:700;
+
+}
+
+.badge-success{
+
+    background:#DCFCE7;
+
+    color:#166534;
+
+}
+
+.badge-warning{
+
+    background:#FEF3C7;
+
+    color:#92400E;
+
+}
+
+.badge-danger{
+
+    background:#FEE2E2;
+
+    color:#991B1B;
+
+}
+
+/* ==========================================================
+   EMPTY STATE
+========================================================== */
+
+.empty-state{
+
+    text-align:center;
+
+    padding:60px 30px;
+
+    background:white;
+
+    border-radius:20px;
+
+    box-shadow:0 8px 18px rgba(0,0,0,.08);
+
+}
+
+.empty-state i{
+
+    font-size:60px;
 
     color:#2563EB;
 
@@ -353,7 +613,7 @@ textarea{
 
 }
 
-.action-card h3{
+.empty-state h2{
 
     color:#1E3A5F;
 
@@ -361,115 +621,53 @@ textarea{
 
 }
 
-.action-card p{
+.empty-state p{
 
     color:#64748B;
 
-    line-height:1.6;
-
 }
 
-/* ==========================================
-   RECENT ACTIVITY
-========================================== */
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
 
-.recent-activity{
+@media(max-width:992px){
 
-    margin-bottom:35px;
+.dashboard-grid{
 
-}
-
-/* ==========================================
-   SYSTEM STATUS
-========================================== */
-
-.status-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-
-    gap:18px;
-
-    margin-top:20px;
+    grid-template-columns:1fr;
 
 }
-
-.status-item{
-
-    background:#F8FAFC;
-
-    border-radius:14px;
-
-    padding:18px;
-
-    font-weight:600;
 
 }
 
 @media(max-width:768px){
 
+.content{
+
+    padding:22px;
+
+}
+
 .admin-hero{
-
-flex-direction:column;
-
-align-items:flex-start;
-
-gap:20px;
-
-}
-
-}
-
-/* ==========================================
-   DASHBOARD GRID
-========================================== */
-
-.dashboard-grid{
-
-    display:grid;
-
-    grid-template-columns:2fr 1fr;
-
-    gap:25px;
-
-    margin-bottom:35px;
-
-}
-
-.dashboard-card{
-
-    min-height:320px;
-
-}
-
-#recentActivity{
-
-    display:flex;
 
     flex-direction:column;
 
-    gap:15px;
+    align-items:flex-start;
+
+    gap:20px;
 
 }
 
-.activity-item{
+.stats-grid{
 
-    padding:15px;
-
-    border-left:5px solid #2563EB;
-
-    background:#F8FAFC;
-
-    border-radius:12px;
+    grid-template-columns:1fr;
 
 }
 
-@media(max-width:900px){
+.card{
 
-.dashboard-grid{
-
-grid-template-columns:1fr;
+    padding:22px;
 
 }
 

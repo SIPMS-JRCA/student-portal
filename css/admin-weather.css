@@ -1,0 +1,289 @@
+/* ==========================================
+   ADMIN WEATHER ADVISORIES
+========================================== */
+
+.page-header{
+
+    margin-bottom:30px;
+
+}
+
+.page-header h1{
+
+    color:#1E3A5F;
+
+    margin-bottom:8px;
+
+}
+
+.page-header p{
+
+    color:#64748B;
+
+}
+
+#postWeatherBtn{
+
+    background:#2563EB;
+
+    color:white;
+
+    border:none;
+
+    padding:14px 22px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    transition:.25s;
+
+}
+
+#postWeatherBtn:hover{
+
+    background:#1D4ED8;
+
+}
+
+#weatherList{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+.weather-card{
+
+    background:white;
+
+    border-left:8px solid #2563EB;
+
+    border-radius:18px;
+
+    padding:25px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+    transition:.25s;
+
+}
+
+.weather-card:hover{
+
+    transform:translateY(-3px);
+
+}
+
+.weather-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+    margin-bottom:18px;
+
+}
+
+.weather-title{
+
+    font-size:22px;
+
+    font-weight:700;
+
+    color:#1E3A5F;
+
+}
+
+.weather-level{
+
+    color:white;
+
+    padding:8px 16px;
+
+    border-radius:999px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+}
+
+.level-information{
+
+    background:#2563EB;
+
+}
+
+.level-rain{
+
+    background:#0EA5E9;
+
+}
+
+.level-typhoon{
+
+    background:#DC2626;
+
+}
+
+.level-flood{
+
+    background:#0F766E;
+
+}
+
+.level-heat{
+
+    background:#F59E0B;
+
+}
+
+.weather-message{
+
+    color:#475569;
+
+    line-height:1.8;
+
+    margin:20px 0;
+
+}
+
+.weather-footer{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+}
+
+.weather-date{
+
+    color:#64748B;
+
+    font-size:14px;
+
+}
+
+.weather-actions{
+
+    display:flex;
+
+    gap:12px;
+
+}
+
+.weather-actions button{
+
+    border:none;
+
+    color:white;
+
+    padding:10px 16px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.edit-weather{
+
+    background:#2563EB;
+
+}
+
+.edit-weather:hover{
+
+    background:#1D4ED8;
+
+}
+
+.delete-weather{
+
+    background:#DC2626;
+
+}
+
+.delete-weather:hover{
+
+    background:#B91C1C;
+
+}
+
+.empty-weather{
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:60px;
+
+    text-align:center;
+
+    color:#64748B;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+.empty-weather i{
+
+    font-size:70px;
+
+    color:#CBD5E1;
+
+    margin-bottom:20px;
+
+}
+
+@media(max-width:768px){
+
+.weather-header{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+}
+
+.weather-footer{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+}
+
+.weather-actions{
+
+    width:100%;
+
+}
+
+.weather-actions button{
+
+    flex:1;
+
+}
+
+}

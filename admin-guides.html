@@ -8,18 +8,16 @@
 <meta name="viewport"
 content="width=device-width, initial-scale=1.0">
 
-<title>Announcements | JRCA</title>
+<title>Safety Guide Manager | SIPMS</title>
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
 <link rel="stylesheet" href="css/style.css">
-
 <link rel="stylesheet" href="css/theme.css">
-
 <link rel="stylesheet" href="css/dashboard-v2.css">
-
 <link rel="stylesheet" href="css/admin.css">
+<link rel="stylesheet" href="css/admin-guides.css">
 
 </head>
 
@@ -56,7 +54,7 @@ JRCA
 
 <span class="desktop-subtitle">
 
-Safety Information & Preparedness Management System
+Safety Information and Preparedness Management System
 
 </span>
 
@@ -74,11 +72,17 @@ SIPMS
 
 <div class="topbar-right">
 
-<button id="notificationBell" class="icon-btn">
+<button
+id="notificationBell"
+class="icon-btn">
 
 <i class="fa-solid fa-bell"></i>
 
-<span id="notificationCount">0</span>
+<span id="notificationCount">
+
+0
+
+</span>
 
 </button>
 
@@ -96,89 +100,117 @@ SIPMS
 
 <h1>
 
-📢 Announcements
+Safety Guide Manager
 
 </h1>
 
 <p>
 
-Create, publish and manage announcements for students and staff.
+Create and manage safety guides available to students.
 
 </p>
 
 </section>
 
-<section class="dashboard-grid">
-
 <div class="card">
 
 <h2>
 
-<i class="fa-solid fa-pen"></i>
+<i class="fa-solid fa-book-open"></i>
 
-Create Announcement
+Create Safety Guide
 
 </h2>
 
 <br>
 
 <input
-id="title"
+id="guideTitle"
 type="text"
-placeholder="Announcement Title">
+placeholder="Guide title">
 
 <br><br>
 
 <textarea
-id="message"
+id="guideContent"
 rows="8"
-placeholder="Write your announcement..."></textarea>
+placeholder="Write the safety guide..."></textarea>
 
 <br><br>
 
-<select id="priority">
+<select id="guideCategory">
 
-<option>General</option>
+<option>
 
-<option>Important</option>
+Fire Safety
 
-<option>Emergency</option>
+</option>
+
+<option>
+
+Earthquake
+
+</option>
+
+<option>
+
+Flood
+
+</option>
+
+<option>
+
+Typhoon
+
+</option>
+
+<option>
+
+First Aid
+
+</option>
+
+<option>
+
+General Safety
+
+</option>
 
 </select>
 
 <br><br>
 
-<button id="postBtn" class="primary-btn">
+<button id="postGuideBtn">
 
 <i class="fa-solid fa-paper-plane"></i>
 
-Post Announcement
+Publish Guide
 
 </button>
 
 </div>
 
+<br>
+
 <div class="card">
 
 <h2>
 
-<i class="fa-solid fa-clock-rotate-left"></i>
+<i class="fa-solid fa-book"></i>
 
-Recent Announcements
+Published Guides
 
 </h2>
 
 <br>
 
-<div id="recentAnnouncements">
+<div id="guideList">
 
-Loading announcements...
-
-</div>
+Loading...
 
 </div>
 
-</section>
+</div>
 
 </main>
 
@@ -189,11 +221,15 @@ Loading announcements...
 import { loadAdminSidebar }
 from "./js/components/adminSidebar.js";
 
-loadAdminSidebar("announcements");
+loadAdminSidebar("guides");
 
 </script>
 
-<script type="module" src="js/pages/admin.js"></script>
+<script
+type="module"
+src="js/pages/admin-guides.js">
+
+</script>
 
 </body>
 

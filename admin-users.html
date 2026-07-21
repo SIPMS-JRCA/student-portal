@@ -5,21 +5,18 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Announcements | JRCA</title>
+<title>User Management | JRCA</title>
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
 <link rel="stylesheet" href="css/style.css">
-
 <link rel="stylesheet" href="css/theme.css">
-
 <link rel="stylesheet" href="css/dashboard-v2.css">
-
 <link rel="stylesheet" href="css/admin.css">
+<link rel="stylesheet" href="css/admin-users.css">
 
 </head>
 
@@ -96,85 +93,122 @@ SIPMS
 
 <h1>
 
-📢 Announcements
+👥 User Management
 
 </h1>
 
 <p>
 
-Create, publish and manage announcements for students and staff.
+View, search and manage all registered users.
 
 </p>
 
 </section>
 
-<section class="dashboard-grid">
+<section class="stats-grid">
 
-<div class="card">
+<div class="stat-card">
+
+<i class="fa-solid fa-users"></i>
+
+<h2 id="totalUsers">0</h2>
+
+<span>Total Users</span>
+
+</div>
+
+<div class="stat-card">
+
+<i class="fa-solid fa-user-graduate"></i>
+
+<h2 id="studentCount">0</h2>
+
+<span>Students</span>
+
+</div>
+
+<div class="stat-card">
+
+<i class="fa-solid fa-user-shield"></i>
+
+<h2 id="adminCount">0</h2>
+
+<span>Administrators</span>
+
+</div>
+
+</section>
+
+<section class="card">
 
 <h2>
 
-<i class="fa-solid fa-pen"></i>
+<i class="fa-solid fa-magnifying-glass"></i>
 
-Create Announcement
+Search Users
 
 </h2>
 
 <br>
 
 <input
-id="title"
 type="text"
-placeholder="Announcement Title">
+id="searchUser"
+placeholder="Search by username or email...">
 
-<br><br>
+</section>
 
-<textarea
-id="message"
-rows="8"
-placeholder="Write your announcement..."></textarea>
+<br>
 
-<br><br>
-
-<select id="priority">
-
-<option>General</option>
-
-<option>Important</option>
-
-<option>Emergency</option>
-
-</select>
-
-<br><br>
-
-<button id="postBtn" class="primary-btn">
-
-<i class="fa-solid fa-paper-plane"></i>
-
-Post Announcement
-
-</button>
-
-</div>
-
-<div class="card">
+<section class="card">
 
 <h2>
 
-<i class="fa-solid fa-clock-rotate-left"></i>
+<i class="fa-solid fa-table"></i>
 
-Recent Announcements
+Registered Users
 
 </h2>
 
 <br>
 
-<div id="recentAnnouncements">
+<div class="table-container">
 
-Loading announcements...
+<table>
 
-</div>
+<thead>
+
+<tr>
+
+<th>Username</th>
+
+<th>Email</th>
+
+<th>Role</th>
+
+<th>Status</th>
+
+<th>Actions</th>
+
+</tr>
+
+</thead>
+
+<tbody id="usersTable">
+
+<tr>
+
+<td colspan="5">
+
+Loading users...
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
 
 </div>
 
@@ -189,11 +223,12 @@ Loading announcements...
 import { loadAdminSidebar }
 from "./js/components/adminSidebar.js";
 
-loadAdminSidebar("announcements");
+loadAdminSidebar("users");
 
 </script>
 
-<script type="module" src="js/pages/admin.js"></script>
+<script type="module"
+src="js/pages/admin-users.js"></script>
 
 </body>
 

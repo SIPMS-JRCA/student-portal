@@ -1,16 +1,17 @@
 import { db } from "../firebase.js";
 
 import {
+
     collection,
     addDoc,
-    query,
-    where,
-    orderBy,
     getDocs,
-    serverTimestamp,
     updateDoc,
     deleteDoc,
-    doc
+    doc,
+    query,
+    orderBy,
+    serverTimestamp
+
 }
 from "https://www.gstatic.com/firebasejs/12.15.0/firebase-firestore.js";
 
@@ -18,24 +19,22 @@ from "https://www.gstatic.com/firebasejs/12.15.0/firebase-firestore.js";
 // Collection
 // ======================================
 
-const reportsRef =
-collection(db,"incidentReports");
+const guidesRef =
+collection(db,"safetyGuides");
 
 // ======================================
-// Submit Report
+// Create Guide
 // ======================================
 
-export async function submitIncidentReport(report){
+export async function createGuide(guide){
 
     await addDoc(
 
-        reportsRef,
+        guidesRef,
 
         {
 
-            ...report,
-
-            status:"Pending",
+            ...guide,
 
             createdAt:serverTimestamp()
 
@@ -46,16 +45,14 @@ export async function submitIncidentReport(report){
 }
 
 // ======================================
-// Student Reports
+// Get Guides
 // ======================================
 
-export async function getStudentReports(uid){
+export async function getGuides(){
 
     const q=query(
 
-        reportsRef,
-
-        where("uid","==",uid),
+        guidesRef,
 
         orderBy("createdAt","desc")
 
@@ -74,60 +71,30 @@ export async function getStudentReports(uid){
 }
 
 // ======================================
-// ALL REPORTS (ADMIN)
+// Update Guide
 // ======================================
 
-export async function getAllReports(){
-
-    const q=query(
-
-        reportsRef,
-
-        orderBy("createdAt","desc")
-
-    );
-
-    const snapshot=await getDocs(q);
-
-    return snapshot.docs.map(doc=>({
-
-        id:doc.id,
-
-        ...doc.data()
-
-    }));
-
-}
-
-// ======================================
-// UPDATE STATUS
-// ======================================
-
-export async function updateIncidentStatus(id,status){
+export async function updateGuide(id,data){
 
     await updateDoc(
 
-        doc(db,"incidentReports",id),
+        doc(db,"safetyGuides",id),
 
-        {
-
-            status
-
-        }
+        data
 
     );
 
 }
 
 // ======================================
-// DELETE REPORT
+// Delete Guide
 // ======================================
 
-export async function deleteIncidentReport(id){
+export async function deleteGuide(id){
 
     await deleteDoc(
 
-        doc(db,"incidentReports",id)
+        doc(db,"safetyGuides",id)
 
     );
 
