@@ -70,14 +70,13 @@ button{
 
 .dashboard{
     display:flex;
-    min-height:calc(100vh - 78px);
-    background:var(--background);
 }
 
 .content{
     flex:1;
-    min-width:0;
-    padding:30px;
+    margin-left:270px;
+    margin-top:86px;
+    padding:34px;
 }
 
 /*==============================
@@ -85,23 +84,18 @@ button{
 ==============================*/
 
 .topbar-v2{
-
-    position:sticky;
+    position:fixed;
     top:0;
-    z-index:5000;
-
-    height:78px;
-
+    left:0;
+    right:0;
+    height:86px;
+    z-index:1200;
     background:#fff;
-
     display:flex;
     justify-content:space-between;
     align-items:center;
-
-    padding:0 24px;
-
-    box-shadow:0 5px 18px rgba(0,0,0,.08);
-
+    padding:0 22px;
+    box-shadow:0 4px 20px rgba(0,0,0,.08);
 }
 
 /*==============================
@@ -335,35 +329,109 @@ button{
 
 .sidebar{
 
-    width:250px;
-    flex-shrink:0;
+    width:270px;
 
-    display:flex;
-    flex-direction:column;
-
-    background:linear-gradient(180deg,#1E3A5F,#17304F);
+    background:#18355D;
 
     color:#fff;
 
-    transition:width .30s ease,left .30s ease;
+    display:flex;
+
+    flex-direction:column;
+
+    height:calc(100vh - 86px);
+
+    position: fixed;
+
+    top: 86px;
+
+    left: 0;
 
     overflow:hidden;
+
+    z-index:1000;
+
+}
+
+/* ==========================
+   Sidebar Header
+========================== */
+
+.sidebar-header{
+
+    flex-shrink:0;
+
+    padding:30px 24px 20px;
+
+    border-bottom:1px solid rgba(255,255,255,.12);
+
+}
+
+/* ==========================
+   Scrollable Menu
+========================== */
+
+.sidebar-menu-wrapper{
+
+    flex:1;
+
+    overflow-y:auto;
+
+    overflow-x:hidden;
+
+    scrollbar-width:thin;
+
+    scrollbar-color:#4b6fa8 transparent;
+
+}
+
+/* Chrome */
+
+.sidebar-menu-wrapper::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+.sidebar-menu-wrapper::-webkit-scrollbar-thumb{
+
+    background:#4b6fa8;
+
+    border-radius:20px;
+
+}
+
+.sidebar-menu-wrapper::-webkit-scrollbar-track{
+
+    background:transparent;
+
+}
+
+/* ==========================
+   Footer
+========================== */
+
+.sidebar-footer{
+
+    margin-top:auto;
+
+    flex-shrink:0;
+
+    border-top:1px solid rgba(255,255,255,.12);
+
+    color:#CBD5E1;
+
+    padding:16px;
+
+    text-align:center;
+
+    font-size:13px;
 
 }
 
 /*==============================
   HEADER
 ==============================*/
-
-.sidebar-header{
-
-    padding:28px 20px;
-
-    text-align:center;
-
-    border-bottom:1px solid rgba(255,255,255,.12);
-
-}
 
 .sidebar-header h2{
 
@@ -482,22 +550,6 @@ button{
   FOOTER
 ==============================*/
 
-.sidebar-footer{
-
-    margin-top:auto;
-
-    padding:20px;
-
-    text-align:center;
-
-    font-size:13px;
-
-    color:#CBD5E1;
-
-    border-top:1px solid rgba(255,255,255,.12);
-
-}
-
 /*==============================
   DESKTOP COLLAPSE
 ==============================*/
@@ -542,29 +594,22 @@ button{
 @media (max-width:768px){
 
 .sidebar{
-
     position:fixed;
-
-    top:0;
-    left:-250px;
-
-    width:250px;
-    height:100vh;
-
-    z-index:6000;
-
+    left:-280px;
+    top:86px;
+    width:270px;
+    height:calc(100vh - 86px);
+    transition:.3s;
 }
 
 .sidebar.open{
-
     left:0;
-
 }
 
-.sidebar-header{
-
-    margin-top:70px;
-
+.content{
+    margin-left:0;
+    width:100%;
+    padding:18px;
 }
 
 }
@@ -1099,15 +1144,17 @@ button{
 
     .sidebar{
 
-        position:fixed;
+    position:fixed;
 
-        top:0;
-        left:-250px;
+    top:64px;
 
-        width:250px;
-        height:100vh;
+    left:-250px;
 
-        z-index:6000;
+    width:250px;
+
+    height:calc(100vh - 64px);
+
+    z-index:6000;
 
     }
 
@@ -1121,6 +1168,9 @@ button{
 
     .content{
 
+        margin-left:0;
+        margin-top:64px;
+        width:100%;
         padding:18px;
 
     }
@@ -1173,7 +1223,7 @@ button{
 
     .notification-panel{
 
-        top:74px;
+        top:64px;
 
         left:12px;
         right:12px;
@@ -1185,35 +1235,5 @@ button{
 }
 
 /*==============================
-  DESKTOP
-==============================*/
-
-@media (min-width:769px){
-
-    .sidebar{
-
-        position:relative;
-
-        left:0;
-
-    }
-
-}
-
-/*==============================
   FINAL SAFETY FIXES
 ==============================*/
-
-body,
-.dashboard,
-.content{
-
-    overflow-x:hidden;
-
-}
-
-img{
-
-    max-width:100%;
-
-}

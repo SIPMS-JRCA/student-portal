@@ -12,90 +12,67 @@ export function loadStudentSidebar(activePage) {
 
         </div>
 
-        <ul class="sidebar-menu">
+        <div class="sidebar-menu-wrapper">
 
-            <li class="${activePage==="dashboard"?"active":""}"
-                onclick="location.href='dashboard.html'">
+            <ul class="sidebar-menu">
 
-                <i class="fa-solid fa-house"></i>
+                <li class="${activePage==="dashboard"?"active":""}"
+                    onclick="location.href='dashboard.html'">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Dashboard</span>
+                </li>
 
-                <span>Dashboard</span>
+                <li class="${activePage==="announcements"?"active":""}"
+                    onclick="location.href='announcements.html'">
+                    <i class="fa-solid fa-bullhorn"></i>
+                    <span>Announcements</span>
+                </li>
 
-            </li>
+                <li class="${activePage==="guides"?"active":""}"
+                    onclick="location.href='guides.html'">
+                    <i class="fa-solid fa-book-open"></i>
+                    <span>Safety Guides</span>
+                </li>
 
-            <li class="${activePage==="announcements"?"active":""}"
-                onclick="location.href='announcements.html'">
+                <li class="${activePage==="contacts"?"active":""}"
+                    onclick="location.href='contacts.html'">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>Emergency Contacts</span>
+                </li>
 
-                <i class="fa-solid fa-bullhorn"></i>
+                <li class="${activePage==="emergency"?"active":""}"
+                    onclick="location.href='emergency.html'">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    <span>Emergency Alert</span>
+                </li>
 
-                <span>Announcements</span>
+                <li class="${activePage==="weather"?"active":""}"
+                    onclick="location.href='weather.html'">
+                    <i class="fa-solid fa-cloud-sun-rain"></i>
+                    <span>Weather Advisories</span>
+                </li>
 
-            </li>
+                <li class="${activePage==="drills"?"active":""}"
+                    onclick="location.href='drills.html'">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <span>Drill Schedule</span>
+                </li>
 
-            <li class="${activePage==="guides"?"active":""}"
-                onclick="location.href='guides.html'">
+                <li class="${activePage==="incidentReports"?"active":""}"
+                    onclick="location.href='incidentReports.html'">
+                    <i class="fa-solid fa-file-circle-exclamation"></i>
+                    <span>Incident Reports</span>
+                </li>
 
-                <i class="fa-solid fa-book-open"></i>
+                <li class="${activePage==="profile"?"active":""}"
+                    onclick="location.href='profile.html'">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Profile</span>
+                </li>
 
-                <span>Safety Guides</span>
+            </ul>
 
-            </li>
-
-            <li class="${activePage==="contacts"?"active":""}"
-                onclick="location.href='contacts.html'">
-
-                <i class="fa-solid fa-phone"></i>
-
-                <span>Emergency Contacts</span>
-
-            </li>
-
-            <li class="${activePage==="emergency"?"active":""}"
-                onclick="location.href='emergency.html'">
-
-                <i class="fa-solid fa-triangle-exclamation"></i>
-
-                <span>Emergency Alerts</span>
-
-            </li>
-
-            <li class="${activePage==="weather"?"active":""}"
-                onclick="location.href='weather.html'">
-
-                <i class="fa-solid fa-cloud-sun-rain"></i>
-
-                <span>Weather Advisories</span>
-
-            </li>
-
-            <li class="${activePage==="drills"?"active":""}"
-                onclick="location.href='drills.html'">
-
-                <i class="fa-solid fa-calendar-days"></i>
-
-                <span>Drill Schedule</span>
-
-            </li>
-
-            <li class="${activePage==="incidentReports"?"active":""}"
-                onclick="location.href='incidentReports.html'">
-
-                <i class="fa-solid fa-file-circle-exclamation"></i>
-
-                <span>Incident Reports</span>
-
-            </li>
-
-            <li class="${activePage==="profile"?"active":""}"
-                onclick="location.href='profile.html'">
-
-                <i class="fa-solid fa-user"></i>
-
-                <span>Profile</span>
-
-            </li>
-
-        </ul>
+        </div>
 
         <div class="sidebar-footer">
 
