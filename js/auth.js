@@ -15,6 +15,49 @@ import {
     setDoc
 } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-firestore.js";
 
+const passwordInput = document.getElementById("password");
+
+if (passwordInput) {
+
+    const lengthRule = document.getElementById("lengthRule");
+    const upperRule = document.getElementById("upperRule");
+    const numberRule = document.getElementById("numberRule");
+    const specialRule = document.getElementById("specialRule");
+
+    passwordInput.addEventListener("input", () => {
+
+        const password = passwordInput.value;
+
+        const hasLength = password.length >= 8;
+        const hasUpper = /[A-Z]/.test(password);
+        const hasNumber = /\d/.test(password);
+        const validCharacters = /^[A-Za-z0-9_-]*$/.test(password);
+
+        updateRule(lengthRule, hasLength, "At least 8 characters");
+        updateRule(upperRule, hasUpper, "At least 1 uppercase letter");
+        updateRule(numberRule, hasNumber, "At least 1 number");
+        updateRule(specialRule, validCharacters, 'Only letters, numbers, "-" and "_"');
+
+    });
+
+    function updateRule(element, valid, text){
+
+        if(valid){
+
+            element.textContent = "✅ " + text;
+            element.className = "valid";
+
+        }else{
+
+            element.textContent = "❌ " + text;
+            element.className = "invalid";
+
+        }
+
+    }
+
+}
+
 // =======================
 // SIGN UP
 // =======================
@@ -31,6 +74,25 @@ if (signupBtn) {
 
         if (!username || !email || !password) {
             alert("Please fill in all fields.");
+            return;
+        }
+
+        // Password requirements:
+        // • At least 8 characters
+        // • At least 1 uppercase letter
+        // • At least 1 number
+        // • Only letters, numbers, "_" and "-"
+
+        const passwordPattern = /^(?=.*[A-Z])(?=.*\d)[A-Za-z0-9_-]{8,}$/;
+
+        if (!passwordPattern.test(password)) {
+            alert(
+                "Password must meet the following requirements:\n\n" +
+                "• At least 8 characters long\n" +
+                "• At least 1 uppercase letter\n" +
+                "• At least 1 number\n" +
+                "• Only letters, numbers, '-' and '_' are allowed"
+            );
             return;
         }
 

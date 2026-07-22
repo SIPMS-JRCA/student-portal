@@ -93,3 +93,25 @@ textarea{
     resize:vertical;
 
 }
+
+.password-requirements{
+    margin-top:10px;
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+}
+
+.password-requirements small{
+    color:#64748B;
+    transition:.2s;
+}
+
+.password-requirements small.valid{
+    color:#10B981;
+    font-weight:600;
+}
+
+.password-requirements small.invalid{
+    color:#DC2626;
+    font-weight:600;
+}
